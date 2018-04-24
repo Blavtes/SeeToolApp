@@ -47,7 +47,7 @@
 {
     [super viewDidLoad];
     
-    [self configData];
+//    [self configData];
     [self initBaseView];
     [self.navTopView hideBack];
     self.title = @"更多";

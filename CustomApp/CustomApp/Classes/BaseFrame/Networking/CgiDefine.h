@@ -35,9 +35,9 @@
 
 #pragma mark -JSPatch appKey
 #ifdef DEBUG
-#define JSPatchAppKey @"3bfb4f2411dadf2d"
+#define JSPatchAppKey @"8d25fb54471e2fc7"
 #else
-#define JSPatchAppKey @"3bfb4f2411dadf2d"
+#define JSPatchAppKey @"8d25fb54471e2fc7"
 #endif
 
 #ifdef DEBUG

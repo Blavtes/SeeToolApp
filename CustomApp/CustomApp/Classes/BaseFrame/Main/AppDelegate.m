@@ -23,12 +23,13 @@
 
 #import "WebViewController.h"
 
-#import "MorePageViewController.h"
+#import "OneViewController.h"
 #import "CustomNavigationController.h"
 
 
 #import "NetWorkingStatusModel.h"   //  网络状态model
 #import "JSPatchTool.h"
+#import "GJSShareManager.h"
 
 
 NSString* const NotificationCategoryIdent  = @"ACTIONABLE";
@@ -75,12 +76,12 @@ static float const kLaunchSleepTime = 1.5f;
     [self registerNotifications];
     //  个推SDK注册
 //    [GeTuiManager starGeTuiSDK];
-    
+    [GJSShareManager regeistShareModule];
     //  创建搜索
     //[self initCoreSpotlight];
     
     //  注册分享
-    [GJSShareSDKManager regeistShareSDK];
+//    [GJSShareSDKManager regeistShareSDK];
     
 #pragma mark - 发送采集数据
     
@@ -165,7 +166,7 @@ static float const kLaunchSleepTime = 1.5f;
 
 - (void)loadTabBarViewController
 {
-    MorePageViewController *vc = [[MorePageViewController alloc] init];
+    OneViewController *vc = [[OneViewController alloc] init];
     
     CustomNavigationController *nav = [[CustomNavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
