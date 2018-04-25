@@ -222,12 +222,16 @@
     NSString *content = [NSString stringWithFormat:@"过期时间：%@，手机号： %@，url :%@,设备名: %@",_orderModel.outtime ,_orderModel.phone,_orderModel.dirverName ];
     NSString *imagePath = _orderModel.url;
     
- 
-    NSMutableDictionary * shareParams = [GJSShareManager shareParamsWithTitleString:title
-                                                                      contentString:content
-                                                                     imageUrlString:imagePath
-                                                                      linkUrlString:url];
-    [GJSShareManager showShareAlertSheet:self withParameter:shareParams];
+    if (title.length > 0) {
+        NSMutableDictionary * shareParams = [GJSShareManager shareParamsWithTitleString:title
+                                                                          contentString:content
+                                                                         imageUrlString:imagePath
+                                                                          linkUrlString:url];
+        [GJSShareManager showShareAlertSheet:self withParameter:shareParams];
+    } else {
+        Show_iToast(@"暂无数据")
+    }
+    
 }
 
 - (void)reflashAllClick:(id)sender

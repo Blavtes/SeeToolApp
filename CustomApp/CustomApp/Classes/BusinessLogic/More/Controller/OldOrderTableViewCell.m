@@ -20,7 +20,7 @@
         self.cellClickBlock(_indexPath);
     }
     
-    [UIPasteboard generalPasteboard].string = [NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@",_phoneLabel.text,_statusLabel.text,_pidLabel.text,_payTimeLabel.text,_outTimelabel.text,_dirverLabel.text];
+    [UIPasteboard generalPasteboard].string = [NSString stringWithFormat:@"过期时间：%@\n1、点击手机号复制 %@\n2、打开粘贴 https://weixin110.qq.com/security/readtemplate?t=signup_verify/w_wxteam_help\n设备名:%@",_outTimelabel.text,_phoneLabel.text,_dirverLabel.text];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
