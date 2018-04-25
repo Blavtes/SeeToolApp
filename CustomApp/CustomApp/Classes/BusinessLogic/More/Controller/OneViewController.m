@@ -233,7 +233,9 @@
     [self hideKeyBoardClick];
     if (_allCopyStr.length > 0) {
         [UIPasteboard generalPasteboard].string = _allCopyStr;
-
+        Show_iToast(@"复制成功~");
+    } else  {
+        Show_iToast(@"复制失败~");
     }
 }
 
@@ -243,7 +245,9 @@
     [self hideKeyBoardClick];
     if (_phoneCopyStr.length > 0) {
         [UIPasteboard generalPasteboard].string = _phoneCopyStr;
-
+        Show_iToast(@"复制成功~");
+    } else {
+        Show_iToast(@"复制失败~");
     }
 
 }
@@ -252,9 +256,9 @@
 - (void)shareClick:(id)sender
 {
     [self hideKeyBoardClick];
-    NSString *title = _orderModel.phone;
+    NSString *title = @"分享";
     NSString *url = @"https://weixin110.qq.com/security/readtemplate?t=signup_verify/w_wxteam_help";
-    NSString *content = [NSString stringWithFormat:@"过期时间：%@，手机号： %@，url :%@,设备名: %@",_orderModel.sOutTime ,_orderModel.phone,url,_orderModel.dirverName ];
+    NSString *content = [NSString stringWithFormat:@"过期时间：%@，手机号：%@,设备名:%@",_orderModel.sOutTime ,_orderModel.phone,_orderModel.dirverName ];
     NSString *imagePath = _orderModel.url;
     
     if (title.length > 0) {
@@ -290,10 +294,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             if (weakSelf.listArr.count > 0) {
                 OldOrderModel *model = weakSelf.listArr[0];
-                
-                [weakSelf.imageView sd_setImageWithURL:[NSURL URLWithString:model.url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-                    
-                }];
+                [weakSelf showText:model.sOutTime phone:model.phone dirverName:model.dirverName url:model.url];
+              
             }
           
             [weakSelf.tableView reloadData];
@@ -383,6 +385,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf showText:weakSelf.orderModel.sOutTime phone:weakSelf.orderModel.phone dirverName:weakSelf.orderModel.dirverName url:weakSelf.orderModel.url];
             });
+            [weakSelf reflashAllClick:nil];
         } else {
             weakSelf.phoneCopyStr = @"";
             weakSelf.allCopyStr = @"";
@@ -490,27 +493,16 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"OldOrderTableViewCell" owner:self options:nil] lastObject];
     }
     OldOrderModel *model = [_listArr objectAtIndex:indexPath.row];
-    cell.phoneLabel.text = model.phone;
-    NSString *status = model.status;
-    if ([model.phone isEqualToString:@"0"]) {
-        status = @"(失败)";
-    } else  if ([model.phone isEqualToString:@"1"]) {
-        status = @"(成功)";
-    } else {
-        status = @"(进行中)";
-    }
-    cell.statusLabel.text = status;
-    cell.pidLabel.text = [NSString stringWithFormat:@"编号:%@",model.pId];
-    cell.payTimeLabel.text = [NSString stringWithFormat:@"结算时间:%@",model.paytime];
-    cell.dirverLabel.text = [NSString stringWithFormat:@"设备名:%@",model.dirverName];
-    cell.outTimelabel.text = [NSString stringWithFormat:@"有效期:%@",model.sOutTime];
+  
     __weak typeof(self) weakSelf = self;
-    
+
     cell.cellClickBlock = ^(NSIndexPath *index) {
         OldOrderModel *model = [weakSelf.listArr objectAtIndex:index.row];
 
         [weakSelf showText:model.sOutTime phone:model.phone dirverName:model.dirverName url:model.url];
     };
+    [cell setModel:model];
+    
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
     return cell;
 }

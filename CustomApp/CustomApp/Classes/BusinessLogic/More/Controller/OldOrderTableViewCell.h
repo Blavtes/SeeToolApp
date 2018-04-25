@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "OrderModel.h"
 typedef void(^CellClickBlock)(NSIndexPath *path);
 
 @interface OldOrderTableViewCell : UITableViewCell
@@ -20,4 +20,6 @@ typedef void(^CellClickBlock)(NSIndexPath *path);
 @property (nonatomic, copy) CellClickBlock cellClickBlock;
 
 @property (nonatomic, strong) NSIndexPath *indexPath;
+
+- (void)setModel:(OldOrderModel *)model;
 @end
