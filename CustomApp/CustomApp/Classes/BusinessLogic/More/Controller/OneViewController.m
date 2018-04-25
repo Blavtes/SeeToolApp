@@ -120,7 +120,7 @@
             _showBgView.hidden = NO;
             _tableView.hidden = YES;
             [UIView animateWithDuration:0.2 animations:^{
-                _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH / 2 , MAIN_SCREEN_WIDTH / 2);
+                _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH / 2 + 40, MAIN_SCREEN_WIDTH / 2 + 40);
                 _imageView.center = CGPointMake( MAIN_SCREEN_WIDTH / 2,  MAIN_SCREEN_HEIGHT / 2);
             }];
         }
@@ -160,13 +160,13 @@
 - (void)configBGView
 {
     
-    float width = (MAIN_SCREEN_WIDTH - 40 - 60) / 6;
+    float width = (MAIN_SCREEN_WIDTH - 40 - 30) / 3;
     
     UIColor *nomarlColor = COMMON_BLUE_GREEN_COLOR;
     UIColor *hightColor = COMMON_GREY_COLOR;
     UIColor *backColor = UIColorFromRGBHex(0xDADCDC);
     
-    UIButton *codeAll = [[UIButton alloc] initWithFrame:CGRectMake(5, 2.5 , width, _bgView.height - 5)];
+    UIButton *codeAll = [[UIButton alloc] initWithFrame:CGRectMake(10, 2.5 , width, _bgView.height - 5)];
     [codeAll addTarget:self action:@selector(codeAllContent:) forControlEvents:UIControlEventTouchUpInside];
     [codeAll setTitleColor:nomarlColor forState:UIControlStateNormal];
     [codeAll setTitleColor:hightColor forState:UIControlStateHighlighted];
@@ -179,48 +179,48 @@
     codeAll.titleLabel.lineBreakMode = 0;
     [_bgView addSubview:codeAll];
     
-    UIButton *copyAll = [[UIButton alloc] initWithFrame:CGRectMake(width + 15, 2.5 , width, _bgView.height - 5)];
-    [copyAll addTarget:self action:@selector(copyAllContent:) forControlEvents:UIControlEventTouchUpInside];
-    [copyAll setTitleColor:nomarlColor forState:UIControlStateNormal];
-    [copyAll setTitleColor:hightColor forState:UIControlStateHighlighted];
-    [copyAll setBackgroundColor:backColor forState:UIControlStateNormal];
-    [copyAll setBackgroundColor:backColor forState:UIControlStateHighlighted];
-
-    copyAll.titleLabel.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
-    copyAll.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [copyAll setTitle:@"复制全部\n内容" forState:UIControlStateNormal];
-    copyAll.titleLabel.lineBreakMode = 0;
-    [_bgView addSubview:copyAll];
+//    UIButton *copyAll = [[UIButton alloc] initWithFrame:CGRectMake(width + 15, 2.5 , width, _bgView.height - 5)];
+//    [copyAll addTarget:self action:@selector(copyAllContent:) forControlEvents:UIControlEventTouchUpInside];
+//    [copyAll setTitleColor:nomarlColor forState:UIControlStateNormal];
+//    [copyAll setTitleColor:hightColor forState:UIControlStateHighlighted];
+//    [copyAll setBackgroundColor:backColor forState:UIControlStateNormal];
+//    [copyAll setBackgroundColor:backColor forState:UIControlStateHighlighted];
+//
+//    copyAll.titleLabel.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
+//    copyAll.titleLabel.textAlignment = NSTextAlignmentCenter;
+//    [copyAll setTitle:@"复制全部\n内容" forState:UIControlStateNormal];
+//    copyAll.titleLabel.lineBreakMode = 0;
+//    [_bgView addSubview:copyAll];
     
-    UIButton *copyNumber = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 2 + 5 ,2.5, width, _bgView.height  - 5)];
-    [copyNumber addTarget:self action:@selector(copyNumber:) forControlEvents:UIControlEventTouchUpInside];
-    [copyNumber setTitleColor:nomarlColor forState:UIControlStateNormal];
-    [copyNumber setTitleColor:hightColor forState:UIControlStateHighlighted];
-    [copyNumber setBackgroundColor:backColor forState:UIControlStateNormal];
-    [copyNumber setBackgroundColor:backColor forState:UIControlStateHighlighted];
-
-    copyNumber.titleLabel.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
-    copyNumber.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [copyNumber setTitle:@"复制手\n机号" forState:UIControlStateNormal];
-    copyNumber.titleLabel.lineBreakMode = 0;
-    [_bgView addSubview:copyNumber];
-    
-    
-    UIButton *shareBtn = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 3 + 5, 2.5 , width, _bgView.height - 5)];
-    [shareBtn addTarget:self action:@selector(shareClick:) forControlEvents:UIControlEventTouchUpInside];
-    [shareBtn setTitleColor:nomarlColor forState:UIControlStateNormal];
-    [shareBtn setTitleColor:hightColor forState:UIControlStateHighlighted];
-    [shareBtn setBackgroundColor:backColor forState:UIControlStateNormal];
-    [shareBtn setBackgroundColor:backColor forState:UIControlStateHighlighted];
-
-    shareBtn.titleLabel.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
-    shareBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [shareBtn setTitle:@"分享二维\n码" forState:UIControlStateNormal];
-    shareBtn.titleLabel.lineBreakMode = 0;
-    [_bgView addSubview:shareBtn];
+//    UIButton *copyNumber = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 2 + 5 ,2.5, width, _bgView.height  - 5)];
+//    [copyNumber addTarget:self action:@selector(copyNumber:) forControlEvents:UIControlEventTouchUpInside];
+//    [copyNumber setTitleColor:nomarlColor forState:UIControlStateNormal];
+//    [copyNumber setTitleColor:hightColor forState:UIControlStateHighlighted];
+//    [copyNumber setBackgroundColor:backColor forState:UIControlStateNormal];
+//    [copyNumber setBackgroundColor:backColor forState:UIControlStateHighlighted];
+//
+//    copyNumber.titleLabel.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
+//    copyNumber.titleLabel.textAlignment = NSTextAlignmentCenter;
+//    [copyNumber setTitle:@"复制手\n机号" forState:UIControlStateNormal];
+//    copyNumber.titleLabel.lineBreakMode = 0;
+//    [_bgView addSubview:copyNumber];
     
     
-    UIButton *reflashBtn = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 4  + 5, 2.5, width, _bgView.height - 5)];
+//    UIButton *shareBtn = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 3 + 5, 2.5 , width, _bgView.height - 5)];
+//    [shareBtn addTarget:self action:@selector(shareClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [shareBtn setTitleColor:nomarlColor forState:UIControlStateNormal];
+//    [shareBtn setTitleColor:hightColor forState:UIControlStateHighlighted];
+//    [shareBtn setBackgroundColor:backColor forState:UIControlStateNormal];
+//    [shareBtn setBackgroundColor:backColor forState:UIControlStateHighlighted];
+//
+//    shareBtn.titleLabel.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
+//    shareBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+//    [shareBtn setTitle:@"分享二维\n码" forState:UIControlStateNormal];
+//    shareBtn.titleLabel.lineBreakMode = 0;
+//    [_bgView addSubview:shareBtn];
+    
+    
+    UIButton *reflashBtn = [[UIButton alloc] initWithFrame:CGRectMake( codeAll.right +  10, 2.5, width, _bgView.height - 5)];
     [reflashBtn addTarget:self action:@selector(reflashAllClick:) forControlEvents:UIControlEventTouchUpInside];
     [reflashBtn setTitleColor:nomarlColor forState:UIControlStateNormal];
     [reflashBtn setTitleColor:hightColor forState:UIControlStateHighlighted];
@@ -233,7 +233,7 @@
     reflashBtn.titleLabel.lineBreakMode = 0;
     [_bgView addSubview:reflashBtn];
     
-    UIButton *allCount = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 5 + 5, 2.5, width, _bgView.height - 5)];
+    UIButton *allCount = [[UIButton alloc] initWithFrame:CGRectMake( reflashBtn.right + 10, 2.5, width, _bgView.height - 5)];
     [allCount addTarget:self action:@selector(allCountClick:) forControlEvents:UIControlEventTouchUpInside];
     [allCount setTitleColor:nomarlColor forState:UIControlStateNormal];
     [allCount setTitleColor:hightColor forState:UIControlStateHighlighted];
@@ -258,7 +258,7 @@
         _showBgView.hidden = NO;
         _tableView.hidden = YES;
         [UIView animateWithDuration:0.2 animations:^{
-            _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH / 2 , MAIN_SCREEN_WIDTH / 2);
+            _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH / 2 + 40, MAIN_SCREEN_WIDTH / 2 + 40);
             _imageView.center = CGPointMake( MAIN_SCREEN_WIDTH / 2,  MAIN_SCREEN_HEIGHT / 2);
             _imageView.image = [UIImage imageNamed:@"code"];
         }];
@@ -325,10 +325,13 @@
         
         NSArray *arr = (NSArray *)response;
         [weakSelf.listArr removeAllObjects];
-        for (NSDictionary *dict in arr) {
+        for (int i = arr.count - 1; i >= 0; i--) {
+            NSDictionary *dict = [arr objectAtIndex:i];
             OldOrderModel *model = [[OldOrderModel alloc] initWithDic:dict];
             [weakSelf.listArr addObject:model];
         }
+       
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             if (weakSelf.listArr.count > 0) {
                 OldOrderModel *model = weakSelf.listArr[0];

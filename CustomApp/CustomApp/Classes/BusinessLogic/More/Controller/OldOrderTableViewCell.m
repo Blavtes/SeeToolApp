@@ -27,13 +27,23 @@
 - (void)setModel:(OldOrderModel *)model
 {
     self.phoneLabel.text = model.phone;
+    self.statusLabel.textAlignment = NSTextAlignmentCenter;
     NSString *status = model.status;
     if ([model.status isEqualToString:@"0"]) {
         status = @"(失败)";
+//        self.statusLabel.textColor = COMMON_RED_COLOR;
+        self.statusLabel.backgroundColor = COMMON_RED_COLOR;
     } else  if ([model.status isEqualToString:@"1"]) {
         status = @"(成功)";
+//        self.statusLabel.textColor = COMMON_BLACK_COLOR;
+        self.statusLabel.backgroundColor = COMMON_WHITE_COLOR;
+
     } else {
         status = @"(进行中)";
+//        self.statusLabel.textColor = COMMON_BLACK_COLOR;
+        self.statusLabel.backgroundColor = COMMON_WHITE_COLOR;
+
+
     }
     self.statusLabel.text = status;
     self.pidLabel.text = [NSString stringWithFormat:@"编号:%@",model.pId];
