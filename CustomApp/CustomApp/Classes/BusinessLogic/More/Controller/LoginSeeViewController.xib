@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,31 +22,49 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9d-Gw-4Fh">
-                    <rect key="frame" x="41" y="228" width="263" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9d-Gw-4Fh">
+                    <rect key="frame" x="41" y="220.5" width="293" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="QGh-gN-GEe"/>
+                    </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqz-sl-vdj">
-                    <rect key="frame" x="102" y="266" width="105" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付宝账号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLS-xo-I1m">
+                    <rect key="frame" x="41" y="180.5" width="105" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="F2e-Pc-h39"/>
+                        <constraint firstAttribute="height" constant="21" id="JHu-2u-7hO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.61968531419999995" green="0.70773424269999996" blue="0.92298540610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqz-sl-vdj">
+                    <rect key="frame" x="41" y="280.5" width="293" height="40"/>
                     <color key="backgroundColor" red="0.61968531419999995" green="0.70773424269999996" blue="0.92298540610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Yh7-zb-OUh"/>
+                    </constraints>
                     <state key="normal" title="登录"/>
                     <connections>
                         <action selector="loginClik:" destination="-1" eventType="touchUpInside" id="ITw-Yp-sfj"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="支付宝账号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLS-xo-I1m">
-                    <rect key="frame" x="41" y="199" width="105" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.61968531419999995" green="0.70773424269999996" blue="0.92298540610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gqz-sl-vdj" secondAttribute="trailing" constant="41" id="9DZ-UA-mvh"/>
+                <constraint firstItem="vLS-xo-I1m" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="41" id="Bdg-ek-hPl"/>
+                <constraint firstItem="gqz-sl-vdj" firstAttribute="bottom" secondItem="W9d-Gw-4Fh" secondAttribute="bottom" constant="60" id="OA6-ob-H97"/>
+                <constraint firstItem="W9d-Gw-4Fh" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" multiplier="0.7" id="kIP-x7-wTu"/>
+                <constraint firstItem="W9d-Gw-4Fh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="41" id="ksd-B0-xnP"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="W9d-Gw-4Fh" secondAttribute="trailing" constant="41" id="nMb-zc-2yw"/>
+                <constraint firstItem="vLS-xo-I1m" firstAttribute="top" secondItem="W9d-Gw-4Fh" secondAttribute="top" constant="-40" id="pOi-RK-qFi"/>
+                <constraint firstItem="W9d-Gw-4Fh" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="sAI-CZ-25p"/>
+                <constraint firstItem="gqz-sl-vdj" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="41" id="zrw-hc-xgq"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>

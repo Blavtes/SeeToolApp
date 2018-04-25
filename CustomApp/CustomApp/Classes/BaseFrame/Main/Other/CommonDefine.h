@@ -22,7 +22,7 @@
 #endif
 
 //  提示用户的信息
-#define Show_iToast(string) [[[[[iToast sharedToast] makeText:string] setGravity:iToastGravityCenter] setDuration:iToastDurationNormal] show];
+#define Show_iToast(string) [[[[[iToast sharedToast] makeText:string] setGravity:iToastGravityBottom] setDuration:iToastDurationNormal] show];
 //#define Show_iToast(string) [[[[iToast makeText:string] setGravity:iToastGravityCenter] setDuration:iToastDurationNormal] show];
 
 /**

@@ -62,11 +62,11 @@
 //    _loginName = @"15820498438";
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    [self.navTopView hideBack];
-    self.title = @"海鱼辅助平台";
+    self.navTopView.hidden = YES;
+    self.title = @"海鱼工作室";
     [self login];
     [self.view endEditing:YES];
-    
+    _showBgView.frame = CGRectMake(0, 0, MAIN_SCREEN_WIDTH, MAIN_SCREEN_HEIGHT);
     UITapGestureRecognizer *p2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imagePan:)];
     [_imageView addGestureRecognizer:p2];
     
@@ -80,6 +80,8 @@
     [_imageView sd_setImageWithURL:[NSURL URLWithString:@"http:\/\/www.shyl8.net\/WechatData\/2018-04-23\/13285287478.jpg"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         
     }];
+    
+//    _tableView.mj_footer =
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -96,8 +98,12 @@
 {
     _showBgView.hidden = YES;
     _tableView.hidden = NO;
+    self.navTopView.backgroundColor = COMMON_BLACK_COLOR;
     [UIView animateWithDuration:0.2 animations:^{
         _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH - _textView.right - 10, _textView.height);
+        [_imageView sd_setImageWithURL:[NSURL URLWithString:_orderModel.url] placeholderImage:[UIImage imageNamed:@"code"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            
+        }];
     }];
     
 }
@@ -107,16 +113,17 @@
 - (void)imagePan:(id)sender
 {
     if (_orderModel.url.length > 0) {
-    if (!_showBgView.isHidden) {
-        [self showPan:nil];
-    } else {
-        _showBgView.hidden = NO;
-        _tableView.hidden = YES;
-        [UIView animateWithDuration:0.2 animations:^{
-            _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH / 2 , MAIN_SCREEN_WIDTH / 2);
-            _imageView.center = CGPointMake( MAIN_SCREEN_WIDTH / 2,  MAIN_SCREEN_HEIGHT / 2);
-        }];
-    }
+        if (!_showBgView.isHidden) {
+            [self showPan:nil];
+        } else {
+            self.navTopView.backgroundColor = COMMON_BLUE_GREEN_COLOR;
+            _showBgView.hidden = NO;
+            _tableView.hidden = YES;
+            [UIView animateWithDuration:0.2 animations:^{
+                _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH / 2 , MAIN_SCREEN_WIDTH / 2);
+                _imageView.center = CGPointMake( MAIN_SCREEN_WIDTH / 2,  MAIN_SCREEN_HEIGHT / 2);
+            }];
+        }
     }
 }
 
@@ -153,13 +160,26 @@
 - (void)configBGView
 {
     
-    float width = (_bgView.width - 40 - 5) / 5;
+    float width = (MAIN_SCREEN_WIDTH - 40 - 60) / 6;
     
-    UIColor *nomarlColor = UIColorFromRGBHex(0x1D84FB);
+    UIColor *nomarlColor = COMMON_BLUE_GREEN_COLOR;
     UIColor *hightColor = COMMON_GREY_COLOR;
     UIColor *backColor = UIColorFromRGBHex(0xDADCDC);
     
-    UIButton *copyAll = [[UIButton alloc] initWithFrame:CGRectMake(2.5, 2.5 , width, _bgView.height - 5)];
+    UIButton *codeAll = [[UIButton alloc] initWithFrame:CGRectMake(5, 2.5 , width, _bgView.height - 5)];
+    [codeAll addTarget:self action:@selector(codeAllContent:) forControlEvents:UIControlEventTouchUpInside];
+    [codeAll setTitleColor:nomarlColor forState:UIControlStateNormal];
+    [codeAll setTitleColor:hightColor forState:UIControlStateHighlighted];
+    [codeAll setBackgroundColor:backColor forState:UIControlStateNormal];
+    [codeAll setBackgroundColor:backColor forState:UIControlStateHighlighted];
+    
+    codeAll.titleLabel.font = [UIFont systemFontOfSize:kCommonFontSizeSubSubDesc_12];
+    codeAll.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [codeAll setTitle:@"二维码" forState:UIControlStateNormal];
+    codeAll.titleLabel.lineBreakMode = 0;
+    [_bgView addSubview:codeAll];
+    
+    UIButton *copyAll = [[UIButton alloc] initWithFrame:CGRectMake(width + 15, 2.5 , width, _bgView.height - 5)];
     [copyAll addTarget:self action:@selector(copyAllContent:) forControlEvents:UIControlEventTouchUpInside];
     [copyAll setTitleColor:nomarlColor forState:UIControlStateNormal];
     [copyAll setTitleColor:hightColor forState:UIControlStateHighlighted];
@@ -172,7 +192,7 @@
     copyAll.titleLabel.lineBreakMode = 0;
     [_bgView addSubview:copyAll];
     
-    UIButton *copyNumber = [[UIButton alloc] initWithFrame:CGRectMake( width + 10 ,2.5, width, _bgView.height  - 5)];
+    UIButton *copyNumber = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 2 + 5 ,2.5, width, _bgView.height  - 5)];
     [copyNumber addTarget:self action:@selector(copyNumber:) forControlEvents:UIControlEventTouchUpInside];
     [copyNumber setTitleColor:nomarlColor forState:UIControlStateNormal];
     [copyNumber setTitleColor:hightColor forState:UIControlStateHighlighted];
@@ -186,7 +206,7 @@
     [_bgView addSubview:copyNumber];
     
     
-    UIButton *shareBtn = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 2 , 2.5 , width, _bgView.height - 5)];
+    UIButton *shareBtn = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 3 + 5, 2.5 , width, _bgView.height - 5)];
     [shareBtn addTarget:self action:@selector(shareClick:) forControlEvents:UIControlEventTouchUpInside];
     [shareBtn setTitleColor:nomarlColor forState:UIControlStateNormal];
     [shareBtn setTitleColor:hightColor forState:UIControlStateHighlighted];
@@ -200,7 +220,7 @@
     [_bgView addSubview:shareBtn];
     
     
-    UIButton *reflashBtn = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 3 , 2.5, width, _bgView.height - 5)];
+    UIButton *reflashBtn = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 4  + 5, 2.5, width, _bgView.height - 5)];
     [reflashBtn addTarget:self action:@selector(reflashAllClick:) forControlEvents:UIControlEventTouchUpInside];
     [reflashBtn setTitleColor:nomarlColor forState:UIControlStateNormal];
     [reflashBtn setTitleColor:hightColor forState:UIControlStateHighlighted];
@@ -213,7 +233,7 @@
     reflashBtn.titleLabel.lineBreakMode = 0;
     [_bgView addSubview:reflashBtn];
     
-    UIButton *allCount = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 4 , 2.5, width, _bgView.height - 5)];
+    UIButton *allCount = [[UIButton alloc] initWithFrame:CGRectMake( (width + 10) * 5 + 5, 2.5, width, _bgView.height - 5)];
     [allCount addTarget:self action:@selector(allCountClick:) forControlEvents:UIControlEventTouchUpInside];
     [allCount setTitleColor:nomarlColor forState:UIControlStateNormal];
     [allCount setTitleColor:hightColor forState:UIControlStateHighlighted];
@@ -225,6 +245,24 @@
     [allCount setTitle:@"查看当天\n统计" forState:UIControlStateNormal];
     allCount.titleLabel.lineBreakMode = 0;
     [_bgView addSubview:allCount];
+    
+  
+}
+
+- (void)codeAllContent:(id)sender
+{
+    if (!_showBgView.isHidden) {
+        [self showPan:nil];
+    } else {
+        self.navTopView.backgroundColor = COMMON_BLUE_GREEN_COLOR;
+        _showBgView.hidden = NO;
+        _tableView.hidden = YES;
+        [UIView animateWithDuration:0.2 animations:^{
+            _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH / 2 , MAIN_SCREEN_WIDTH / 2);
+            _imageView.center = CGPointMake( MAIN_SCREEN_WIDTH / 2,  MAIN_SCREEN_HEIGHT / 2);
+            _imageView.image = [UIImage imageNamed:@"code"];
+        }];
+    }
 }
 
 //复制全部
@@ -406,9 +444,12 @@
     self.textView.text = [NSString stringWithFormat:@"过期时间：%@\n1、点击手机号复制 %@\n2、打开粘贴 https://weixin110.qq.com/security/readtemplate?t=signup_verify/w_wxteam_help\n设备名:%@",outtime,phone,dirverName];
     self.phoneCopyStr = phone;
     self.allCopyStr = self.textView.text;
-    
+    __block UIImageView *imageview = self.imageView;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         
+        dispatch_async(dispatch_get_main_queue(), ^{
+             imageview.image = image;
+        });
     }];
 }
 
@@ -502,8 +543,8 @@
         [weakSelf showText:model.sOutTime phone:model.phone dirverName:model.dirverName url:model.url];
     };
     [cell setModel:model];
-    
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    cell.indexPath = indexPath;
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     return cell;
 }
 

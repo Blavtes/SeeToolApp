@@ -22,4 +22,5 @@ typedef void(^CellClickBlock)(NSIndexPath *path);
 @property (nonatomic, strong) NSIndexPath *indexPath;
 
 - (void)setModel:(OldOrderModel *)model;
+
 @end

@@ -30,26 +30,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZh-lk-2vG">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="699-V7-JdW">
-                            <rect key="frame" x="10" y="20" width="128" height="40"/>
+                            <rect key="frame" x="10" y="20" width="139" height="40"/>
                             <color key="backgroundColor" red="0.85383599426445711" green="0.86228981598984777" blue="0.86228981598984777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="3M1-JY-9Go"/>
                             </constraints>
-                            <state key="normal" title="获取订单"/>
+                            <state key="normal" title="获取订单">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <action selector="getOrderClick:" destination="-1" eventType="touchUpInside" id="Dhh-do-hee"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE1-Ir-Obe">
-                            <rect key="frame" x="148" y="20" width="128" height="40"/>
+                            <rect key="frame" x="159" y="20" width="139" height="40"/>
                             <color key="backgroundColor" red="0.85383599430000001" green="0.86228981599999999" blue="0.86228981599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="7Kb-Nz-927"/>
                             </constraints>
-                            <state key="normal" title="刷新可接单数量(0)"/>
+                            <state key="normal" title="刷新可接单数量(0)">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <action selector="reflashClick:" destination="-1" eventType="touchUpInside" id="wiR-Xv-nxh"/>
                             </connections>
@@ -88,7 +92,7 @@
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2L2-7k-gck">
-                            <rect key="frame" x="10" y="282" width="355" height="311"/>
+                            <rect key="frame" x="10" y="282" width="355" height="355"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <outlet property="dataSource" destination="i5M-Pr-FkT" id="kOG-ne-2pJ"/>
@@ -110,6 +114,7 @@
                         <constraint firstItem="524-VH-15f" firstAttribute="leading" secondItem="XZh-lk-2vG" secondAttribute="leading" constant="8" id="0TE-NP-3zc"/>
                         <constraint firstItem="mlU-iw-hzw" firstAttribute="trailing" secondItem="tQp-7S-WHs" secondAttribute="trailing" id="7yC-lD-zeY"/>
                         <constraint firstItem="PE1-Ir-Obe" firstAttribute="top" secondItem="699-V7-JdW" secondAttribute="top" id="98D-CU-yXT"/>
+                        <constraint firstItem="mlU-iw-hzw" firstAttribute="leading" secondItem="PE1-Ir-Obe" secondAttribute="trailing" constant="20" id="Dpz-NR-9ab"/>
                         <constraint firstAttribute="trailing" secondItem="tQp-7S-WHs" secondAttribute="trailing" constant="8" id="H0p-js-5js"/>
                         <constraint firstItem="699-V7-JdW" firstAttribute="top" secondItem="XZh-lk-2vG" secondAttribute="top" constant="20" id="K5n-dA-5Le"/>
                         <constraint firstItem="2L2-7k-gck" firstAttribute="leading" secondItem="XZh-lk-2vG" secondAttribute="leading" constant="10" id="KqC-i9-Yfn"/>
@@ -134,7 +139,7 @@
             <constraints>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="XZh-lk-2vG" secondAttribute="bottom" id="HnZ-sH-RDW"/>
                 <constraint firstItem="XZh-lk-2vG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="dQk-ra-gIh"/>
-                <constraint firstItem="XZh-lk-2vG" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="qrx-0G-xcQ"/>
+                <constraint firstItem="XZh-lk-2vG" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="qrx-0G-xcQ"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="XZh-lk-2vG" secondAttribute="trailing" id="zbA-fm-YNX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
