@@ -108,6 +108,23 @@
 
 #define iPhone6Plus                            (IS_IPHONE && IS_WIDESCREEN_6Plus)
 
+
+#define IS_IPHONE_X (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 812.0)
+
+//iOS 11检测
+#define IS_iOS11  ([CommonMethod checkoutIsiOS11])
+
+//top安全距离
+#define IPHONE_X_Top_SafeArea_Height  (IS_IPHONE_X == YES ? 44 : 0)
+
+#define IPHONE_X_Top_Normal_Height  (IS_IPHONE_X == YES ? 24 : 0)
+
+//bottom 安全距离
+#define IPHONE_X_Bottom_SafeArea_Height  (IS_IPHONE_X == YES ? 34 : 0)
+
+#define KeyBoard_Height (216 + IPHONE_X_Bottom_SafeArea_Height + 39)
+
+
 #pragma mark - 通用按钮转角 - tvCell高度等 - 导航栏高度等 - 获取屏幕宽度
 //  屏幕大小
 #define MAIN_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width

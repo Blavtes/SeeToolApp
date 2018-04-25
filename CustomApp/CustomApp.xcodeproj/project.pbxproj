@@ -139,9 +139,6 @@
 		571D65411EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D64251EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.m */; };
 		571D65421EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571D64261EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.xib */; };
 		571D65431EA495AC00BD6D15 /* SafeKeyBoardField.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D64291EA495AC00BD6D15 /* SafeKeyBoardField.m */; };
-		571D65441EA495AC00BD6D15 /* ReleaseNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 571D642C1EA495AC00BD6D15 /* ReleaseNotes.txt */; };
-		571D65451EA495AC00BD6D15 /* tingyun.sh in Resources */ = {isa = PBXBuildFile; fileRef = 571D642D1EA495AC00BD6D15 /* tingyun.sh */; };
-		571D65461EA495AC00BD6D15 /* tingyunApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571D642E1EA495AC00BD6D15 /* tingyunApp.framework */; };
 		571D65471EA495AC00BD6D15 /* SCNavTabBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 571D64321EA495AC00BD6D15 /* SCNavTabBar.bundle */; };
 		571D65481EA495AC00BD6D15 /* SCNavTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D64351EA495AC00BD6D15 /* SCNavTabBarController.m */; };
 		571D65491EA495AC00BD6D15 /* SCNavTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D64381EA495AC00BD6D15 /* SCNavTabBar.m */; };
@@ -211,6 +208,26 @@
 		57B6488C208F343200F6AE91 /* OldOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6488A208F343200F6AE91 /* OldOrderTableViewCell.m */; };
 		57B6488D208F343200F6AE91 /* OldOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B6488B208F343200F6AE91 /* OldOrderTableViewCell.xib */; };
 		57B64897208F3F7A00F6AE91 /* GJSShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B64895208F3F7A00F6AE91 /* GJSShareManager.m */; };
+		57B648C4209006B700F6AE91 /* MyBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6489B209006B600F6AE91 /* MyBaseLayout.m */; };
+		57B648C5209006B700F6AE91 /* MyBorderline.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6489D209006B600F6AE91 /* MyBorderline.m */; };
+		57B648C6209006B700F6AE91 /* MyDimeScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6489F209006B600F6AE91 /* MyDimeScale.m */; };
+		57B648C7209006B700F6AE91 /* MyFloatLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648A1209006B600F6AE91 /* MyFloatLayout.m */; };
+		57B648C8209006B700F6AE91 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648A3209006B600F6AE91 /* MyFlowLayout.m */; };
+		57B648C9209006B700F6AE91 /* MyFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648A5209006B600F6AE91 /* MyFrameLayout.m */; };
+		57B648CA209006B700F6AE91 /* MyGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648A8209006B600F6AE91 /* MyGridLayout.m */; };
+		57B648CB209006B700F6AE91 /* MyGridNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648AA209006B600F6AE91 /* MyGridNode.m */; };
+		57B648CC209006B700F6AE91 /* MyLayoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648AE209006B600F6AE91 /* MyLayoutDelegate.m */; };
+		57B648CD209006B700F6AE91 /* MyLayoutMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648B1209006B600F6AE91 /* MyLayoutMath.m */; };
+		57B648CE209006B700F6AE91 /* MyLayoutPos.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648B3209006B600F6AE91 /* MyLayoutPos.m */; };
+		57B648CF209006B700F6AE91 /* MyLayoutSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648B6209006B600F6AE91 /* MyLayoutSize.m */; };
+		57B648D0209006B700F6AE91 /* MyLayoutSizeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648B8209006B600F6AE91 /* MyLayoutSizeClass.m */; };
+		57B648D1209006B700F6AE91 /* MyLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648BB209006B600F6AE91 /* MyLinearLayout.m */; };
+		57B648D2209006B700F6AE91 /* MyMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648BD209006B600F6AE91 /* MyMaker.m */; };
+		57B648D3209006B700F6AE91 /* MyPathLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648BF209006B600F6AE91 /* MyPathLayout.m */; };
+		57B648D4209006B700F6AE91 /* MyRelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648C1209006B600F6AE91 /* MyRelativeLayout.m */; };
+		57B648D5209006B700F6AE91 /* MyTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648C3209006B600F6AE91 /* MyTableLayout.m */; };
+		57B648D82090073C00F6AE91 /* CustomBaseLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648D62090073A00F6AE91 /* CustomBaseLayoutViewController.m */; };
+		57B648DB2090075500F6AE91 /* CustomNavTopFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B648DA2090075500F6AE91 /* CustomNavTopFrameLayout.m */; };
 		57BFC64A1EB1E51C00BE2AC0 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BFC6491EB1E51C00BE2AC0 /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -482,9 +499,6 @@
 		571D64261EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCSpecialCharacterKeyboardView.xib; sourceTree = "<group>"; };
 		571D64281EA495AC00BD6D15 /* SafeKeyBoardField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeKeyBoardField.h; sourceTree = "<group>"; };
 		571D64291EA495AC00BD6D15 /* SafeKeyBoardField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeKeyBoardField.m; sourceTree = "<group>"; };
-		571D642C1EA495AC00BD6D15 /* ReleaseNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReleaseNotes.txt; sourceTree = "<group>"; };
-		571D642D1EA495AC00BD6D15 /* tingyun.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = tingyun.sh; sourceTree = "<group>"; };
-		571D642E1EA495AC00BD6D15 /* tingyunApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = tingyunApp.framework; sourceTree = "<group>"; };
 		571D64311EA495AC00BD6D15 /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
 		571D64321EA495AC00BD6D15 /* SCNavTabBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SCNavTabBar.bundle; sourceTree = "<group>"; };
 		571D64341EA495AC00BD6D15 /* SCNavTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNavTabBarController.h; sourceTree = "<group>"; };
@@ -605,6 +619,52 @@
 		57B6488B208F343200F6AE91 /* OldOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OldOrderTableViewCell.xib; sourceTree = "<group>"; };
 		57B64895208F3F7A00F6AE91 /* GJSShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJSShareManager.m; sourceTree = "<group>"; };
 		57B64896208F3F7A00F6AE91 /* GJSShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJSShareManager.h; sourceTree = "<group>"; };
+		57B6489A209006B600F6AE91 /* MyBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseLayout.h; sourceTree = "<group>"; };
+		57B6489B209006B600F6AE91 /* MyBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBaseLayout.m; sourceTree = "<group>"; };
+		57B6489C209006B600F6AE91 /* MyBorderline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBorderline.h; sourceTree = "<group>"; };
+		57B6489D209006B600F6AE91 /* MyBorderline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBorderline.m; sourceTree = "<group>"; };
+		57B6489E209006B600F6AE91 /* MyDimeScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDimeScale.h; sourceTree = "<group>"; };
+		57B6489F209006B600F6AE91 /* MyDimeScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDimeScale.m; sourceTree = "<group>"; };
+		57B648A0209006B600F6AE91 /* MyFloatLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFloatLayout.h; sourceTree = "<group>"; };
+		57B648A1209006B600F6AE91 /* MyFloatLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFloatLayout.m; sourceTree = "<group>"; };
+		57B648A2209006B600F6AE91 /* MyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
+		57B648A3209006B600F6AE91 /* MyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
+		57B648A4209006B600F6AE91 /* MyFrameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFrameLayout.h; sourceTree = "<group>"; };
+		57B648A5209006B600F6AE91 /* MyFrameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFrameLayout.m; sourceTree = "<group>"; };
+		57B648A6209006B600F6AE91 /* MyGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGrid.h; sourceTree = "<group>"; };
+		57B648A7209006B600F6AE91 /* MyGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGridLayout.h; sourceTree = "<group>"; };
+		57B648A8209006B600F6AE91 /* MyGridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGridLayout.m; sourceTree = "<group>"; };
+		57B648A9209006B600F6AE91 /* MyGridNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGridNode.h; sourceTree = "<group>"; };
+		57B648AA209006B600F6AE91 /* MyGridNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGridNode.m; sourceTree = "<group>"; };
+		57B648AB209006B600F6AE91 /* MyLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayout.h; sourceTree = "<group>"; };
+		57B648AC209006B600F6AE91 /* MyLayoutDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutDef.h; sourceTree = "<group>"; };
+		57B648AD209006B600F6AE91 /* MyLayoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutDelegate.h; sourceTree = "<group>"; };
+		57B648AE209006B600F6AE91 /* MyLayoutDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutDelegate.m; sourceTree = "<group>"; };
+		57B648AF209006B600F6AE91 /* MyLayoutInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutInner.h; sourceTree = "<group>"; };
+		57B648B0209006B600F6AE91 /* MyLayoutMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutMath.h; sourceTree = "<group>"; };
+		57B648B1209006B600F6AE91 /* MyLayoutMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutMath.m; sourceTree = "<group>"; };
+		57B648B2209006B600F6AE91 /* MyLayoutPos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutPos.h; sourceTree = "<group>"; };
+		57B648B3209006B600F6AE91 /* MyLayoutPos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutPos.m; sourceTree = "<group>"; };
+		57B648B4209006B600F6AE91 /* MyLayoutPosInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutPosInner.h; sourceTree = "<group>"; };
+		57B648B5209006B600F6AE91 /* MyLayoutSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutSize.h; sourceTree = "<group>"; };
+		57B648B6209006B600F6AE91 /* MyLayoutSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutSize.m; sourceTree = "<group>"; };
+		57B648B7209006B600F6AE91 /* MyLayoutSizeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutSizeClass.h; sourceTree = "<group>"; };
+		57B648B8209006B600F6AE91 /* MyLayoutSizeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutSizeClass.m; sourceTree = "<group>"; };
+		57B648B9209006B600F6AE91 /* MyLayoutSizeInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutSizeInner.h; sourceTree = "<group>"; };
+		57B648BA209006B600F6AE91 /* MyLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLinearLayout.h; sourceTree = "<group>"; };
+		57B648BB209006B600F6AE91 /* MyLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLinearLayout.m; sourceTree = "<group>"; };
+		57B648BC209006B600F6AE91 /* MyMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMaker.h; sourceTree = "<group>"; };
+		57B648BD209006B600F6AE91 /* MyMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMaker.m; sourceTree = "<group>"; };
+		57B648BE209006B600F6AE91 /* MyPathLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPathLayout.h; sourceTree = "<group>"; };
+		57B648BF209006B600F6AE91 /* MyPathLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPathLayout.m; sourceTree = "<group>"; };
+		57B648C0209006B600F6AE91 /* MyRelativeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRelativeLayout.h; sourceTree = "<group>"; };
+		57B648C1209006B600F6AE91 /* MyRelativeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRelativeLayout.m; sourceTree = "<group>"; };
+		57B648C2209006B600F6AE91 /* MyTableLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableLayout.h; sourceTree = "<group>"; };
+		57B648C3209006B600F6AE91 /* MyTableLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableLayout.m; sourceTree = "<group>"; };
+		57B648D62090073A00F6AE91 /* CustomBaseLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBaseLayoutViewController.m; sourceTree = "<group>"; };
+		57B648D72090073B00F6AE91 /* CustomBaseLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBaseLayoutViewController.h; sourceTree = "<group>"; };
+		57B648D92090075500F6AE91 /* CustomNavTopFrameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavTopFrameLayout.h; sourceTree = "<group>"; };
+		57B648DA2090075500F6AE91 /* CustomNavTopFrameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavTopFrameLayout.m; sourceTree = "<group>"; };
 		57BFC6481EB1E51C00BE2AC0 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		57BFC6491EB1E51C00BE2AC0 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		8AAE19CCE86F30DFD3504F95 /* Pods-CustomApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomApp/Pods-CustomApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -640,7 +700,6 @@
 				571D65551EA495AC00BD6D15 /* ShareSDKCoreService.framework in Frameworks */,
 				571D64B51EA495AC00BD6D15 /* JSPatchPlatform.framework in Frameworks */,
 				571D654E1EA495AC00BD6D15 /* SMSConnection.framework in Frameworks */,
-				571D65461EA495AC00BD6D15 /* tingyunApp.framework in Frameworks */,
 				571D654D1EA495AC00BD6D15 /* SinaWeiboConnection.framework in Frameworks */,
 				571D654F1EA495AC00BD6D15 /* TencentWeiboConnection.framework in Frameworks */,
 				571D654C1EA495AC00BD6D15 /* QZoneConnection.framework in Frameworks */,
@@ -914,6 +973,8 @@
 		571D61201EA495AB00BD6D15 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				57B648D72090073B00F6AE91 /* CustomBaseLayoutViewController.h */,
+				57B648D62090073A00F6AE91 /* CustomBaseLayoutViewController.m */,
 				571D61211EA495AB00BD6D15 /* CustomBaseViewController.h */,
 				571D61221EA495AB00BD6D15 /* CustomBaseViewController.m */,
 				571D61231EA495AB00BD6D15 /* CustomNavigationController.h */,
@@ -927,6 +988,8 @@
 		571D61271EA495AB00BD6D15 /* CustomExtension */ = {
 			isa = PBXGroup;
 			children = (
+				57B648D92090075500F6AE91 /* CustomNavTopFrameLayout.h */,
+				57B648DA2090075500F6AE91 /* CustomNavTopFrameLayout.m */,
 				571D61281EA495AB00BD6D15 /* AttributedLabel.h */,
 				571D61291EA495AB00BD6D15 /* AttributedLabel.m */,
 				571D612A1EA495AB00BD6D15 /* CheckUpdateAlertView.h */,
@@ -2198,6 +2261,7 @@
 		571D63DE1EA495AC00BD6D15 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				57B64898209006B600F6AE91 /* MyLayout */,
 				571D63DF1EA495AC00BD6D15 /* ASProgressPopUpView */,
 				571D63E41EA495AC00BD6D15 /* Bugly */,
 				571D63E61EA495AC00BD6D15 /* CoreLock */,
@@ -2206,7 +2270,6 @@
 				571D64111EA495AC00BD6D15 /* iToast */,
 				571D64141EA495AC00BD6D15 /* KeychainItemWrapper */,
 				571D64171EA495AC00BD6D15 /* MCSafeKeyBoard */,
-				571D642A1EA495AC00BD6D15 /* nbs-newlens-ios-2.5.4 */,
 				571D642F1EA495AC00BD6D15 /* PSAlertView */,
 				571D64301EA495AC00BD6D15 /* SCNavTabBar */,
 				571D643B1EA495AC00BD6D15 /* ShareSDK */,
@@ -2437,24 +2500,6 @@
 				571D64291EA495AC00BD6D15 /* SafeKeyBoardField.m */,
 			);
 			path = MCTextField;
-			sourceTree = "<group>";
-		};
-		571D642A1EA495AC00BD6D15 /* nbs-newlens-ios-2.5.4 */ = {
-			isa = PBXGroup;
-			children = (
-				571D642B1EA495AC00BD6D15 /* TingYun_部署文档 */,
-				571D642E1EA495AC00BD6D15 /* tingyunApp.framework */,
-			);
-			path = "nbs-newlens-ios-2.5.4";
-			sourceTree = "<group>";
-		};
-		571D642B1EA495AC00BD6D15 /* TingYun_部署文档 */ = {
-			isa = PBXGroup;
-			children = (
-				571D642C1EA495AC00BD6D15 /* ReleaseNotes.txt */,
-				571D642D1EA495AC00BD6D15 /* tingyun.sh */,
-			);
-			path = "TingYun_部署文档";
 			sourceTree = "<group>";
 		};
 		571D642F1EA495AC00BD6D15 /* PSAlertView */ = {
@@ -2705,6 +2750,63 @@
 			path = ../../../../../../../GjFax_ios/HX_GJS/Classes/BaseFrame/Networking/HttpToolManager;
 			sourceTree = "<group>";
 		};
+		57B64898209006B600F6AE91 /* MyLayout */ = {
+			isa = PBXGroup;
+			children = (
+				57B64899209006B600F6AE91 /* Lib */,
+			);
+			path = MyLayout;
+			sourceTree = "<group>";
+		};
+		57B64899209006B600F6AE91 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				57B6489A209006B600F6AE91 /* MyBaseLayout.h */,
+				57B6489B209006B600F6AE91 /* MyBaseLayout.m */,
+				57B6489C209006B600F6AE91 /* MyBorderline.h */,
+				57B6489D209006B600F6AE91 /* MyBorderline.m */,
+				57B6489E209006B600F6AE91 /* MyDimeScale.h */,
+				57B6489F209006B600F6AE91 /* MyDimeScale.m */,
+				57B648A0209006B600F6AE91 /* MyFloatLayout.h */,
+				57B648A1209006B600F6AE91 /* MyFloatLayout.m */,
+				57B648A2209006B600F6AE91 /* MyFlowLayout.h */,
+				57B648A3209006B600F6AE91 /* MyFlowLayout.m */,
+				57B648A4209006B600F6AE91 /* MyFrameLayout.h */,
+				57B648A5209006B600F6AE91 /* MyFrameLayout.m */,
+				57B648A6209006B600F6AE91 /* MyGrid.h */,
+				57B648A7209006B600F6AE91 /* MyGridLayout.h */,
+				57B648A8209006B600F6AE91 /* MyGridLayout.m */,
+				57B648A9209006B600F6AE91 /* MyGridNode.h */,
+				57B648AA209006B600F6AE91 /* MyGridNode.m */,
+				57B648AB209006B600F6AE91 /* MyLayout.h */,
+				57B648AC209006B600F6AE91 /* MyLayoutDef.h */,
+				57B648AD209006B600F6AE91 /* MyLayoutDelegate.h */,
+				57B648AE209006B600F6AE91 /* MyLayoutDelegate.m */,
+				57B648AF209006B600F6AE91 /* MyLayoutInner.h */,
+				57B648B0209006B600F6AE91 /* MyLayoutMath.h */,
+				57B648B1209006B600F6AE91 /* MyLayoutMath.m */,
+				57B648B2209006B600F6AE91 /* MyLayoutPos.h */,
+				57B648B3209006B600F6AE91 /* MyLayoutPos.m */,
+				57B648B4209006B600F6AE91 /* MyLayoutPosInner.h */,
+				57B648B5209006B600F6AE91 /* MyLayoutSize.h */,
+				57B648B6209006B600F6AE91 /* MyLayoutSize.m */,
+				57B648B7209006B600F6AE91 /* MyLayoutSizeClass.h */,
+				57B648B8209006B600F6AE91 /* MyLayoutSizeClass.m */,
+				57B648B9209006B600F6AE91 /* MyLayoutSizeInner.h */,
+				57B648BA209006B600F6AE91 /* MyLinearLayout.h */,
+				57B648BB209006B600F6AE91 /* MyLinearLayout.m */,
+				57B648BC209006B600F6AE91 /* MyMaker.h */,
+				57B648BD209006B600F6AE91 /* MyMaker.m */,
+				57B648BE209006B600F6AE91 /* MyPathLayout.h */,
+				57B648BF209006B600F6AE91 /* MyPathLayout.m */,
+				57B648C0209006B600F6AE91 /* MyRelativeLayout.h */,
+				57B648C1209006B600F6AE91 /* MyRelativeLayout.m */,
+				57B648C2209006B600F6AE91 /* MyTableLayout.h */,
+				57B648C3209006B600F6AE91 /* MyTableLayout.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		7AE10B9DFFB464FE1840AB41 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2792,10 +2894,8 @@
 				571D65541EA495AC00BD6D15 /* Resource.bundle in Resources */,
 				571D652C1EA495AC00BD6D15 /* CLLockVC.xib in Resources */,
 				579F2F531EA5968D00DD2CCD /* LaunchScreen.storyboard in Resources */,
-				571D65441EA495AC00BD6D15 /* ReleaseNotes.txt in Resources */,
 				571D65591EA495AC00BD6D15 /* WeiboSDK.bundle in Resources */,
 				571D656C1EA495AC00BD6D15 /* Images.xcassets in Resources */,
-				571D65451EA495AC00BD6D15 /* tingyun.sh in Resources */,
 				571D60701EA494EF00BD6D15 /* Main.storyboard in Resources */,
 				571D65421EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.xib in Resources */,
 			);
@@ -2857,11 +2957,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				571D64D61EA495AC00BD6D15 /* CustomerCaculateView.m in Sources */,
+				57B648D82090073C00F6AE91 /* CustomBaseLayoutViewController.m in Sources */,
+				57B648DB2090075500F6AE91 /* CustomNavTopFrameLayout.m in Sources */,
+				57B648C5209006B700F6AE91 /* MyBorderline.m in Sources */,
 				571D653D1EA495AC00BD6D15 /* MCImageButton.m in Sources */,
 				571D65651EA495AC00BD6D15 /* pushNotifiWebViewViewController.m in Sources */,
 				571D65491EA495AC00BD6D15 /* SCNavTabBar.m in Sources */,
 				571D64B71EA495AC00BD6D15 /* AppDelegate.m in Sources */,
 				571D65361EA495AC00BD6D15 /* CoreArchive.m in Sources */,
+				57B648CC209006B700F6AE91 /* MyLayoutDelegate.m in Sources */,
 				571D64EF1EA495AC00BD6D15 /* SFRequestService.m in Sources */,
 				571D64B91EA495AC00BD6D15 /* NSDictionary+Extension.m in Sources */,
 				571D64EC1EA495AC00BD6D15 /* SFArchiverRequestService.m in Sources */,
@@ -2873,6 +2977,7 @@
 				571D64E91EA495AC00BD6D15 /* SFArchiverBaseModel.m in Sources */,
 				571D64ED1EA495AC00BD6D15 /* SFRequestError.m in Sources */,
 				57B64883208F17D300F6AE91 /* HttpToolManager.m in Sources */,
+				57B648D4209006B700F6AE91 /* MyRelativeLayout.m in Sources */,
 				571D64C51EA495AC00BD6D15 /* NSObject+SafetyCrash.m in Sources */,
 				571D654A1EA495AC00BD6D15 /* SCPopView.m in Sources */,
 				571D64E51EA495AC00BD6D15 /* main.m in Sources */,
@@ -2880,6 +2985,7 @@
 				571D64CF1EA495AC00BD6D15 /* CustomBaseViewController.m in Sources */,
 				571D65401EA495AC00BD6D15 /* MCNumberKeyboardView.m in Sources */,
 				571D65661EA495AC00BD6D15 /* GJSShareSDKManager.m in Sources */,
+				57B648C9209006B700F6AE91 /* MyFrameLayout.m in Sources */,
 				57B64872208F0BF600F6AE91 /* APRoundedButton.m in Sources */,
 				571D65381EA495AC00BD6D15 /* SecurityNumberKeyBoardView.m in Sources */,
 				571D64CB1EA495AC00BD6D15 /* UIImage+Extension.m in Sources */,
@@ -2902,12 +3008,14 @@
 				571D64CE1EA495AC00BD6D15 /* UIViewController+PresentVC.m in Sources */,
 				571D652D1EA495AC00BD6D15 /* CALayer+Anim.m in Sources */,
 				571D65161EA495AC00BD6D15 /* UpdateTool.m in Sources */,
+				57B648CE209006B700F6AE91 /* MyLayoutPos.m in Sources */,
 				571D64D41EA495AC00BD6D15 /* CustomADTipsView.m in Sources */,
 				571D64BA1EA495AC00BD6D15 /* NSObject+Additions.m in Sources */,
 				571D64931EA495AC00BD6D15 /* UserInfoUtil.m in Sources */,
 				571D64CD1EA495AC00BD6D15 /* UIView+Extension.m in Sources */,
 				571D65291EA495AC00BD6D15 /* ASProgressPopUpView.m in Sources */,
 				571D64911EA495AC00BD6D15 /* LoginInfoModel.m in Sources */,
+				57B648CA209006B700F6AE91 /* MyGridLayout.m in Sources */,
 				571D653A1EA495AC00BD6D15 /* KeychainItemWrapper.m in Sources */,
 				57B64882208F17D300F6AE91 /* HttpToolDataEntity.m in Sources */,
 				571D64DE1EA495AC00BD6D15 /* CustomPWDAlertView.m in Sources */,
@@ -2915,7 +3023,10 @@
 				57B6488C208F343200F6AE91 /* OldOrderTableViewCell.m in Sources */,
 				571D653F1EA495AC00BD6D15 /* MCKeyboardAccessoryView.m in Sources */,
 				571D65411EA495AC00BD6D15 /* MCSpecialCharacterKeyboardView.m in Sources */,
+				57B648C8209006B700F6AE91 /* MyFlowLayout.m in Sources */,
+				57B648D5209006B700F6AE91 /* MyTableLayout.m in Sources */,
 				571D65131EA495AC00BD6D15 /* GuidePageViewController.m in Sources */,
+				57B648C4209006B700F6AE91 /* MyBaseLayout.m in Sources */,
 				571D65601EA495AC00BD6D15 /* TBCityCoreTextAttribute.m in Sources */,
 				571D65281EA495AC00BD6D15 /* ASPopUpView.m in Sources */,
 				571D648E1EA495AC00BD6D15 /* BaseViewModel.m in Sources */,
@@ -2950,21 +3061,28 @@
 				571D64F61EA495AC00BD6D15 /* HttpParamsSetting.m in Sources */,
 				571D64F41EA495AC00BD6D15 /* GjFaxCgiErrorModel.m in Sources */,
 				571D64F21EA495AC00BD6D15 /* BaseNetworkingClient.m in Sources */,
+				57B648D0209006B700F6AE91 /* MyLayoutSizeClass.m in Sources */,
 				571D653B1EA495AC00BD6D15 /* MCCharacterKeyboardView.m in Sources */,
 				57B64876208F168400F6AE91 /* LoginSeeViewController.m in Sources */,
 				571D64D91EA495AC00BD6D15 /* CustomerProgressView.m in Sources */,
 				571D651A1EA495AC00BD6D15 /* MyGetRewardInfo.m in Sources */,
 				57B64897208F3F7A00F6AE91 /* GJSShareManager.m in Sources */,
+				57B648CF209006B700F6AE91 /* MyLayoutSize.m in Sources */,
 				571D65621EA495AC00BD6D15 /* TBCityCoreTextManager.m in Sources */,
 				571D64EE1EA495AC00BD6D15 /* SFRequestListService.m in Sources */,
 				57B64885208F17D300F6AE91 /* UIImage+CompressImage.m in Sources */,
+				57B648CB209006B700F6AE91 /* MyGridNode.m in Sources */,
 				571D65431EA495AC00BD6D15 /* SafeKeyBoardField.m in Sources */,
 				571D65171EA495AC00BD6D15 /* WebViewController.m in Sources */,
+				57B648D1209006B700F6AE91 /* MyLinearLayout.m in Sources */,
+				57B648C6209006B700F6AE91 /* MyDimeScale.m in Sources */,
 				571D65021EA495AC00BD6D15 /* NSObject+ExceptionExtension.m in Sources */,
 				571D64EA1EA495AC00BD6D15 /* SFBaseModel.m in Sources */,
 				571D653E1EA495AC00BD6D15 /* MCKeyboardAccessoryBtn.m in Sources */,
+				57B648CD209006B700F6AE91 /* MyLayoutMath.m in Sources */,
 				571D64E61EA495AC00BD6D15 /* CommonMethod.m in Sources */,
 				571D64DC1EA495AC00BD6D15 /* CustomNavigationBarButtonItem.m in Sources */,
+				57B648C7209006B700F6AE91 /* MyFloatLayout.m in Sources */,
 				571D64E31EA495AC00BD6D15 /* FoldListView.m in Sources */,
 				571D64DD1EA495AC00BD6D15 /* CustomNavTopView.m in Sources */,
 				571D64BD1EA495AC00BD6D15 /* NSString+Judgement.m in Sources */,
@@ -2989,6 +3107,7 @@
 				571D64E71EA495AC00BD6D15 /* SFRefreshTableViewController.m in Sources */,
 				571D64F71EA495AC00BD6D15 /* HttpTool.m in Sources */,
 				571D64D11EA495AC00BD6D15 /* CustomTabBarViewController.m in Sources */,
+				57B648D2209006B700F6AE91 /* MyMaker.m in Sources */,
 				571D65641EA495AC00BD6D15 /* GeTuiManager.m in Sources */,
 				571D64C41EA495AC00BD6D15 /* NSMutableString+SafetyCrash.m in Sources */,
 				579F2F5F1EA5BA6100DD2CCD /* HttpDNSLog.m in Sources */,
@@ -3003,6 +3122,7 @@
 				571D648C1EA495AC00BD6D15 /* AudioUtil.m in Sources */,
 				57B6486E208F038800F6AE91 /* OneViewController.m in Sources */,
 				571D64FF1EA495AC00BD6D15 /* NSString+MD5.m in Sources */,
+				57B648D3209006B700F6AE91 /* MyPathLayout.m in Sources */,
 				571D64921EA495AC00BD6D15 /* PhoneCodeViewModel.m in Sources */,
 				571D64D01EA495AC00BD6D15 /* CustomNavigationController.m in Sources */,
 				571D64E01EA495AC00BD6D15 /* CustomTextField.m in Sources */,

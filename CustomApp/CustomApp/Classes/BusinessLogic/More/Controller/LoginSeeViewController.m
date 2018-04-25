@@ -11,6 +11,7 @@
 #import "HttpToolDataEntity.h"
 
 
+
 @interface LoginSeeViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @end
@@ -19,10 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view endEditing:YES];
+    self.navTopView.hidden = YES;
+    __weak typeof(self) weakSelf = self;
+    UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    [self.view addGestureRecognizer:pan];
+
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)pan:(id)sender
+{
+    [_textField resignFirstResponder];
+}
+
+
 - (IBAction)loginClik:(id)sender {
-//    _textField.text = @"15820498438";
+    [self pan:nil];
+//    _textField.text = @"shylnet@163.com";
     if (_textField.text.length > 0) {
         HttpToolDataEntity *entity = [HttpToolDataEntity new];
         entity.urlString = @"http://shyl8.net/HyArtifact0603.php";

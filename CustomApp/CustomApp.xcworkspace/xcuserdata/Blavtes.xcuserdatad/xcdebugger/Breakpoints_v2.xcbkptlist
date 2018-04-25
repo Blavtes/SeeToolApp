@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
-            timestampString = "546260170.242805"
+            timestampString = "546314216.078275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "-copyAllContent:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
-            timestampString = "546260170.243271"
+            timestampString = "546314216.078796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "-reflashAllClick:"
             landmarkType = "7">
             <Locations>
@@ -42,12 +42,12 @@
                   moduleName = "CustomApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Blavtes/Documents/WorkPlace/myWork/CustomSeeToolApp/CustomApp/CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
-                  timestampString = "546256913.558442"
+                  timestampString = "546314052.718951"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "164"
-                  endingLineNumber = "164"
-                  offsetFromSymbolStart = "817">
+                  startingLineNumber = "246"
+                  endingLineNumber = "246"
+                  offsetFromSymbolStart = "708">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,12 +57,12 @@
                   moduleName = "CustomApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Blavtes/Documents/WorkPlace/myWork/CustomSeeToolApp/CustomApp/CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
-                  timestampString = "546256913.562798"
+                  timestampString = "546314052.7225569"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "166"
-                  endingLineNumber = "166"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "247"
+                  endingLineNumber = "247"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
-            timestampString = "546260170.243456"
+            timestampString = "546314216.079102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "326"
-            endingLineNumber = "326"
+            startingLineNumber = "392"
+            endingLineNumber = "392"
             landmarkName = "-numberOfSectionsInTableView:"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
-            timestampString = "546260170.243601"
+            timestampString = "546314216.07938"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
+            startingLineNumber = "408"
+            endingLineNumber = "408"
             landmarkName = "-tableView:heightForFooterInSection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,12 +106,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
-            timestampString = "546260170.2437609"
+            timestampString = "546314216.079664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "335"
-            endingLineNumber = "335"
+            startingLineNumber = "401"
+            endingLineNumber = "401"
             landmarkName = "-tableView:heightForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
+            timestampString = "546314216.079982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "-shareClick:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
+            timestampString = "546314216.080266"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-imagePan:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
+            timestampString = "546314216.080531"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-showPan:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomApp/Classes/BusinessLogic/More/Controller/OneViewController.m"
+            timestampString = "546314216.080771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-pan:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -15,6 +15,7 @@
 #import "GJSShareManager.h"
 
 @interface OneViewController () <UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIView *showBgView;
 @property (weak, nonatomic) IBOutlet UIButton *getOrderBtn;
 @property (weak, nonatomic) IBOutlet UIButton *reflashBtn;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
@@ -22,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSString *loginName;
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
 
 @property (nonatomic ,strong) OrderModel *orderModel;
 
@@ -43,14 +45,71 @@
     [self.navTopView hideBack];
     self.title = @"海鱼辅助平台";
     [self login];
+    [self.view endEditing:YES];
+    
+    UITapGestureRecognizer *p2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imagePan:)];
+    [_imageView addGestureRecognizer:p2];
+    
+    UITapGestureRecognizer *p3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPan:)];
+    
+    [_showBgView addGestureRecognizer:p3];
+//    
+    UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    [_backgroundView addGestureRecognizer:pan];
+    
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:@"http:\/\/www.shyl8.net\/WechatData\/2018-04-23\/13285287478.jpg"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        
+    }];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)showPan:(id)sender
+{
+    _showBgView.hidden = YES;
+    [UIView animateWithDuration:0.2 animations:^{
+        _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH - _textView.right - 10, _textView.height);
+    }];
+    
+}
+
+//http:\/\/www.shyl8.net\/WechatData\/2018-04-23\/13285287478.jpg
+- (void)imagePan:(id)sender
+{
+    if (_orderModel.url.length > 0) {
+    if (!_showBgView.isHidden) {
+        [self showPan:nil];
+    } else {
+        _showBgView.hidden = NO;
+        [UIView animateWithDuration:0.2 animations:^{
+            _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH / 2 , MAIN_SCREEN_WIDTH / 2);
+            _imageView.center = CGPointMake( MAIN_SCREEN_WIDTH / 2,  MAIN_SCREEN_HEIGHT / 2);
+        }];
+    }
+    }
+}
+
+- (void)showImageView
+{
+    
+}
+
+- (void)pan:(id)sender
+{
+    [self hideKeyBoardClick];
+}
+
+- (void)hideKeyBoardClick
+{
+    [_textView resignFirstResponder];
+}
+
 
 - (void)login
 {
     __weak typeof(self) weakSelf = self;
     
-    LoginSeeViewController *more = [LoginSeeViewController new];
+    LoginSeeViewController *more = [[LoginSeeViewController alloc] initWithNibName:
+    @"LoginSeeViewController" bundle:[NSBundle mainBundle]];
     more.loginBlock = ^(NSString *name) {
         weakSelf.loginName = name;
     };
@@ -138,6 +197,7 @@
 
 - (void)copyAllContent:(id)sender
 {
+    [self hideKeyBoardClick];
     if (_allCopyStr.length > 0) {
         [UIPasteboard generalPasteboard].string = _allCopyStr;
 
@@ -146,6 +206,7 @@
 
 - (void)copyNumber:(id)sender
 {
+    [self hideKeyBoardClick];
     if (_phoneCopyStr.length > 0) {
         [UIPasteboard generalPasteboard].string = _phoneCopyStr;
 
@@ -155,9 +216,10 @@
 
 - (void)shareClick:(id)sender
 {
+    [self hideKeyBoardClick];
     NSString *title = _orderModel.phone;
     NSString *url = _orderModel.url;
-    NSString *content = [NSString stringWithFormat:@"过期时间：%@，手机号： %@，url :%@,设备名: %@",_orderModel.outtime ,_orderModel.phone,_orderModel.url,_orderModel.dirverName ];
+    NSString *content = [NSString stringWithFormat:@"过期时间：%@，手机号： %@，url :%@,设备名: %@",_orderModel.outtime ,_orderModel.phone,_orderModel.dirverName ];
     NSString *imagePath = _orderModel.url;
     
  
@@ -170,6 +232,7 @@
 
 - (void)reflashAllClick:(id)sender
 {
+    [self hideKeyBoardClick];
     HttpToolDataEntity *entity = [HttpToolDataEntity new];
     entity.urlString = @"http://shyl8.net/HyArtifact0603.php";
     entity.parameters = [NSDictionary dictionaryWithObjectsAndKeys:_loginName,@"hiyu_ordeRecord", nil];
@@ -207,6 +270,7 @@
 
 - (void)allCountClick:(id)sender
 {
+    [self hideKeyBoardClick];
     __block  UIButton *btn = (UIButton *)sender;
     btn.enabled = NO;
     HttpToolDataEntity *entity = [HttpToolDataEntity new];
@@ -254,6 +318,7 @@
 
 - (IBAction)getOrderClick:(id)sender
 {
+    [self hideKeyBoardClick];
     HttpToolDataEntity *entity = [HttpToolDataEntity new];
     entity.urlString = @"http://shyl8.net/HyArtifact0603.php";
     entity.parameters = [NSDictionary dictionaryWithObjectsAndKeys:_loginName,@"hiyu_getOrder", nil];
@@ -269,7 +334,7 @@
         if ([model.code  isEqualToString:@"0"]) {
             weakSelf.orderModel = model;
             dispatch_async(dispatch_get_main_queue(), ^{
-                weakSelf.textView.text = [NSString stringWithFormat:@"过期时间：%@\n1、点击手机号复制 %@\n2、打开粘贴 %@\n设备名:%@",model.outtime,model.phone,model.url,model.dirverName];
+                weakSelf.textView.text = [NSString stringWithFormat:@"过期时间：%@\n1、点击手机号复制 %@\n2、打开粘贴 https://weixin110.qq.com/security/readtemplate?t=signup_verify/w_wxteam_help\n设备名:%@",model.outtime,model.phone,model.dirverName];
                 weakSelf.phoneCopyStr = model.phone;
                 weakSelf.allCopyStr = weakSelf.textView.text;
                 
@@ -293,6 +358,7 @@
 
 - (IBAction)reflashClick:(id)sender
 {
+    [self hideKeyBoardClick];
     HttpToolDataEntity *entity = [HttpToolDataEntity new];
     entity.urlString = @"http://shyl8.net/HyArtifact0603.php";
     entity.parameters = [NSDictionary dictionaryWithObjectsAndKeys:_loginName,@"hiyu_availableOrder", nil];
@@ -385,7 +451,7 @@
     cell.dirverLabel.text = [NSString stringWithFormat:@"设备名:%@",model.dirverName];
     cell.outTimelabel.text = [NSString stringWithFormat:@"有效期:%@",model.sOutTime];
     
-    //    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -393,13 +459,14 @@
 {
     [self selectCellData:indexPath];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 #pragma mark - tableCell 选中跳转
 
 - (void)selectCellData:(NSIndexPath *)indexPath
 {
-    
+    [self hideKeyBoardClick];
 }
 
 /*

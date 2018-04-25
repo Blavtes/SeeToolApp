@@ -47,7 +47,7 @@
 #import "iToast.h"
 
 #import "WebViewInfoModel.h"
-#import <tingyunApp/NBSAppAgent.h>
+//#import <tingyunApp/NBSAppAgent.h>
 #pragma mark - 定义通用引用头文件
 #import "CgiDefine.h"
 #import "HttpTool.h"

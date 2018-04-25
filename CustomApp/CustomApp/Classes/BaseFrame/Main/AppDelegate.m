@@ -166,7 +166,8 @@ static float const kLaunchSleepTime = 1.5f;
 
 - (void)loadTabBarViewController
 {
-    OneViewController *vc = [[OneViewController alloc] init];
+    OneViewController *vc = [[OneViewController alloc] initWithNibName:
+                             @"OneViewController" bundle:[NSBundle mainBundle]];
     
     CustomNavigationController *nav = [[CustomNavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;

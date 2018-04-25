@@ -24,7 +24,7 @@ target “CustomApp” do
     
     pod 'UMengAnalytics-NO-IDFA'
 
-    pod 'GTSDK', '~> 1.6.2.0'
-    
+#    pod 'GTSDK', '~> 1.6.2.0'
+
     #pod 'AlicloudHTTPDNS'
 end

@@ -8,8 +8,9 @@
 
 #import "CustomBaseViewController.h"
 
+
 typedef void(^LoginBlock)(NSString *name);
 
-@interface LoginSeeViewController : UIViewController
+@interface LoginSeeViewController : CustomBaseViewController
 @property (nonatomic, copy) LoginBlock loginBlock;
 @end
