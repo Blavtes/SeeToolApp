@@ -13,6 +13,7 @@
 #import "OrderModel.h"
 #import "OldOrderTableViewCell.h"
 #import "GJSShareManager.h"
+#import "NSTimer+Safety.h"
 
 @interface OneViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *showBgView;
@@ -25,15 +26,34 @@
 @property (nonatomic, strong) NSString *loginName;
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
 
-@property (nonatomic ,strong) OrderModel *orderModel;
+@property (nonatomic ,strong) OldOrderModel *orderModel;
 
 @property (nonatomic, strong) NSMutableArray *listArr;
 
 @property (nonatomic, strong) NSString *phoneCopyStr;
 @property (nonatomic, strong) NSString *allCopyStr;
+@property (nonatomic, strong) NSTimer *time;
 @end
 
 @implementation OneViewController
+
+- (IBAction)switchClick:(id)sender {
+    UISwitch *swi = (UISwitch*)sender;
+    if (swi.on) {
+        if (_time) {
+            [_time invalidate];
+            _time = nil;
+        }
+        __weak typeof(self)weakSelf = self;
+        _time = [NSTimer SafetyTimerWithTimeInterval:2 repeats:YES target:sender block:^(NSTimer *timer) {
+            [weakSelf reflashClick:nil];
+            NSLog(@"reflashClick");
+        }];
+    } else {
+        [_time invalidate];
+        _time = nil;
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,8 +74,8 @@
     
     [_showBgView addGestureRecognizer:p3];
 //    
-    UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-    [_backgroundView addGestureRecognizer:pan];
+//    UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+//    [_backgroundView addGestureRecognizer:pan];
     
     [_imageView sd_setImageWithURL:[NSURL URLWithString:@"http:\/\/www.shyl8.net\/WechatData\/2018-04-23\/13285287478.jpg"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         
@@ -63,15 +83,26 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (_loginName.length > 0) {
+        [self reflashAllClick:nil];
+    }
+}
+
+//显示二维码
 - (void)showPan:(id)sender
 {
     _showBgView.hidden = YES;
+    _tableView.hidden = NO;
     [UIView animateWithDuration:0.2 animations:^{
         _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH - _textView.right - 10, _textView.height);
     }];
     
 }
 
+//隐藏二维码
 //http:\/\/www.shyl8.net\/WechatData\/2018-04-23\/13285287478.jpg
 - (void)imagePan:(id)sender
 {
@@ -80,6 +111,7 @@
         [self showPan:nil];
     } else {
         _showBgView.hidden = NO;
+        _tableView.hidden = YES;
         [UIView animateWithDuration:0.2 animations:^{
             _imageView.frame = CGRectMake(_textView.right + 5, _textView.y, MAIN_SCREEN_WIDTH / 2 , MAIN_SCREEN_WIDTH / 2);
             _imageView.center = CGPointMake( MAIN_SCREEN_WIDTH / 2,  MAIN_SCREEN_HEIGHT / 2);
@@ -195,6 +227,7 @@
     [_bgView addSubview:allCount];
 }
 
+//复制全部
 - (void)copyAllContent:(id)sender
 {
     [self hideKeyBoardClick];
@@ -204,6 +237,7 @@
     }
 }
 
+//复制手机号
 - (void)copyNumber:(id)sender
 {
     [self hideKeyBoardClick];
@@ -214,12 +248,13 @@
 
 }
 
+//分享
 - (void)shareClick:(id)sender
 {
     [self hideKeyBoardClick];
     NSString *title = _orderModel.phone;
-    NSString *url = _orderModel.url;
-    NSString *content = [NSString stringWithFormat:@"过期时间：%@，手机号： %@，url :%@,设备名: %@",_orderModel.outtime ,_orderModel.phone,_orderModel.dirverName ];
+    NSString *url = @"https://weixin110.qq.com/security/readtemplate?t=signup_verify/w_wxteam_help";
+    NSString *content = [NSString stringWithFormat:@"过期时间：%@，手机号： %@，url :%@,设备名: %@",_orderModel.sOutTime ,_orderModel.phone,url,_orderModel.dirverName ];
     NSString *imagePath = _orderModel.url;
     
     if (title.length > 0) {
@@ -234,6 +269,7 @@
     
 }
 
+//获取订单列表
 - (void)reflashAllClick:(id)sender
 {
     [self hideKeyBoardClick];
@@ -272,6 +308,7 @@
     }];
 }
 
+//获取统计
 - (void)allCountClick:(id)sender
 {
     [self hideKeyBoardClick];
@@ -320,6 +357,7 @@
     }];
 }
 
+//接单
 - (IBAction)getOrderClick:(id)sender
 {
     [self hideKeyBoardClick];
@@ -336,15 +374,14 @@
        
         
         if ([model.code  isEqualToString:@"0"]) {
-            weakSelf.orderModel = model;
+            weakSelf.orderModel = [OldOrderModel new];
+            weakSelf.orderModel.sOutTime = model.outTime;
+            weakSelf.orderModel.phone = model.msg;
+            weakSelf.orderModel.dirverName = model.dirverName;
+            weakSelf.orderModel.url = model.url;
+            
             dispatch_async(dispatch_get_main_queue(), ^{
-                weakSelf.textView.text = [NSString stringWithFormat:@"过期时间：%@\n1、点击手机号复制 %@\n2、打开粘贴 https://weixin110.qq.com/security/readtemplate?t=signup_verify/w_wxteam_help\n设备名:%@",model.outtime,model.phone,model.dirverName];
-                weakSelf.phoneCopyStr = model.phone;
-                weakSelf.allCopyStr = weakSelf.textView.text;
-                
-                [weakSelf.imageView sd_setImageWithURL:[NSURL URLWithString:model.url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-                    
-                }];
+                [weakSelf showText:weakSelf.orderModel.sOutTime phone:weakSelf.orderModel.phone dirverName:weakSelf.orderModel.dirverName url:weakSelf.orderModel.url];
             });
         } else {
             weakSelf.phoneCopyStr = @"";
@@ -360,6 +397,19 @@
     }];
 }
 
+//填充
+- (void)showText:(NSString *)outtime phone:(NSString *)phone dirverName:(NSString *)dirverName url:(NSString *)url
+{
+    self.textView.text = [NSString stringWithFormat:@"过期时间：%@\n1、点击手机号复制 %@\n2、打开粘贴 https://weixin110.qq.com/security/readtemplate?t=signup_verify/w_wxteam_help\n设备名:%@",outtime,phone,dirverName];
+    self.phoneCopyStr = phone;
+    self.allCopyStr = self.textView.text;
+    
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        
+    }];
+}
+
+//刷新可接个数
 - (IBAction)reflashClick:(id)sender
 {
     [self hideKeyBoardClick];
@@ -406,12 +456,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 0.001f;
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     if (section == _listArr.count - 1) {
-        return 0.001f;
+        return 2;
     }
     
     return kTableViewFooterHeight;
@@ -454,8 +504,14 @@
     cell.payTimeLabel.text = [NSString stringWithFormat:@"结算时间:%@",model.paytime];
     cell.dirverLabel.text = [NSString stringWithFormat:@"设备名:%@",model.dirverName];
     cell.outTimelabel.text = [NSString stringWithFormat:@"有效期:%@",model.sOutTime];
+    __weak typeof(self) weakSelf = self;
     
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.cellClickBlock = ^(NSIndexPath *index) {
+        OldOrderModel *model = [weakSelf.listArr objectAtIndex:index.row];
+
+        [weakSelf showText:model.sOutTime phone:model.phone dirverName:model.dirverName url:model.url];
+    };
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
     return cell;
 }
 
@@ -471,6 +527,10 @@
 - (void)selectCellData:(NSIndexPath *)indexPath
 {
     [self hideKeyBoardClick];
+    
+    OldOrderModel *model = [self.listArr objectAtIndex:indexPath.row];
+    _orderModel = model;
+    [self showText:model.sOutTime phone:model.phone dirverName:model.dirverName url:model.url];
 }
 
 /*

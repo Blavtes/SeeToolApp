@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		253611A87B56923600BE2932 /* libPods-CustomApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA09018C80D359033AA3DAC /* libPods-CustomApp.a */; };
+		5700AF78209059B500684960 /* NSArray+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF63209059B500684960 /* NSArray+SafetyCrash.m */; };
+		5700AF79209059B500684960 /* NSAttributedString+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF65209059B500684960 /* NSAttributedString+SafetyCrash.m */; };
+		5700AF7A209059B500684960 /* NSDictionary+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF67209059B500684960 /* NSDictionary+SafetyCrash.m */; };
+		5700AF7B209059B500684960 /* NSMutableArray+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF69209059B500684960 /* NSMutableArray+SafetyCrash.m */; };
+		5700AF7C209059B500684960 /* NSMutableAttributedString+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF6B209059B500684960 /* NSMutableAttributedString+SafetyCrash.m */; };
+		5700AF7D209059B500684960 /* NSMutableDictionary+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF6D209059B500684960 /* NSMutableDictionary+SafetyCrash.m */; };
+		5700AF7E209059B500684960 /* NSMutableString+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF6F209059B500684960 /* NSMutableString+SafetyCrash.m */; };
+		5700AF7F209059B500684960 /* NSObject+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF71209059B500684960 /* NSObject+SafetyCrash.m */; };
+		5700AF80209059B500684960 /* NSString+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF73209059B500684960 /* NSString+SafetyCrash.m */; };
+		5700AF81209059B500684960 /* NSTimer+Safety.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF75209059B500684960 /* NSTimer+Safety.m */; };
+		5700AF82209059B500684960 /* SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700AF77209059B500684960 /* SafetyCrash.m */; };
 		571D60701EA494EF00BD6D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571D606E1EA494EF00BD6D15 /* Main.storyboard */; };
 		571D648C1EA495AC00BD6D15 /* AudioUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60801EA495AB00BD6D15 /* AudioUtil.m */; };
 		571D648D1EA495AC00BD6D15 /* BuglyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60831EA495AB00BD6D15 /* BuglyTool.m */; };
@@ -29,17 +40,6 @@
 		571D64BB1EA495AC00BD6D15 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60F81EA495AB00BD6D15 /* NSObject+Extension.m */; };
 		571D64BC1EA495AC00BD6D15 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60FA1EA495AB00BD6D15 /* NSString+Extension.m */; };
 		571D64BD1EA495AC00BD6D15 /* NSString+Judgement.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60FC1EA495AB00BD6D15 /* NSString+Judgement.m */; };
-		571D64BE1EA495AC00BD6D15 /* NSArray+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D60FF1EA495AB00BD6D15 /* NSArray+SafetyCrash.m */; };
-		571D64BF1EA495AC00BD6D15 /* NSAttributedString+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61011EA495AB00BD6D15 /* NSAttributedString+SafetyCrash.m */; };
-		571D64C01EA495AC00BD6D15 /* NSDictionary+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61031EA495AB00BD6D15 /* NSDictionary+SafetyCrash.m */; };
-		571D64C11EA495AC00BD6D15 /* NSMutableArray+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61051EA495AB00BD6D15 /* NSMutableArray+SafetyCrash.m */; };
-		571D64C21EA495AC00BD6D15 /* NSMutableAttributedString+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61071EA495AB00BD6D15 /* NSMutableAttributedString+SafetyCrash.m */; };
-		571D64C31EA495AC00BD6D15 /* NSMutableDictionary+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61091EA495AB00BD6D15 /* NSMutableDictionary+SafetyCrash.m */; };
-		571D64C41EA495AC00BD6D15 /* NSMutableString+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D610B1EA495AB00BD6D15 /* NSMutableString+SafetyCrash.m */; };
-		571D64C51EA495AC00BD6D15 /* NSObject+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D610D1EA495AB00BD6D15 /* NSObject+SafetyCrash.m */; };
-		571D64C61EA495AC00BD6D15 /* NSString+SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D610F1EA495AB00BD6D15 /* NSString+SafetyCrash.m */; };
-		571D64C71EA495AC00BD6D15 /* NSTimer+Safety.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61111EA495AB00BD6D15 /* NSTimer+Safety.m */; };
-		571D64C81EA495AC00BD6D15 /* SafetyCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61131EA495AB00BD6D15 /* SafetyCrash.m */; };
 		571D64C91EA495AC00BD6D15 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61151EA495AB00BD6D15 /* UIBarButtonItem+Extension.m */; };
 		571D64CA1EA495AC00BD6D15 /* UIButton+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61171EA495AB00BD6D15 /* UIButton+Extention.m */; };
 		571D64CB1EA495AC00BD6D15 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 571D61191EA495AB00BD6D15 /* UIImage+Extension.m */; };
@@ -234,6 +234,28 @@
 /* Begin PBXFileReference section */
 		2DA09018C80D359033AA3DAC /* libPods-CustomApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49215C2A1E9D83FE1A52F182 /* Pods-CustomApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomApp/Pods-CustomApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5700AF62209059B500684960 /* NSArray+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafetyCrash.h"; sourceTree = "<group>"; };
+		5700AF63209059B500684960 /* NSArray+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafetyCrash.m"; sourceTree = "<group>"; };
+		5700AF64209059B500684960 /* NSAttributedString+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+SafetyCrash.h"; sourceTree = "<group>"; };
+		5700AF65209059B500684960 /* NSAttributedString+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+SafetyCrash.m"; sourceTree = "<group>"; };
+		5700AF66209059B500684960 /* NSDictionary+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafetyCrash.h"; sourceTree = "<group>"; };
+		5700AF67209059B500684960 /* NSDictionary+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafetyCrash.m"; sourceTree = "<group>"; };
+		5700AF68209059B500684960 /* NSMutableArray+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafetyCrash.h"; sourceTree = "<group>"; };
+		5700AF69209059B500684960 /* NSMutableArray+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafetyCrash.m"; sourceTree = "<group>"; };
+		5700AF6A209059B500684960 /* NSMutableAttributedString+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+SafetyCrash.h"; sourceTree = "<group>"; };
+		5700AF6B209059B500684960 /* NSMutableAttributedString+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+SafetyCrash.m"; sourceTree = "<group>"; };
+		5700AF6C209059B500684960 /* NSMutableDictionary+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+SafetyCrash.h"; sourceTree = "<group>"; };
+		5700AF6D209059B500684960 /* NSMutableDictionary+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+SafetyCrash.m"; sourceTree = "<group>"; };
+		5700AF6E209059B500684960 /* NSMutableString+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+SafetyCrash.h"; sourceTree = "<group>"; };
+		5700AF6F209059B500684960 /* NSMutableString+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+SafetyCrash.m"; sourceTree = "<group>"; };
+		5700AF70209059B500684960 /* NSObject+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafetyCrash.h"; sourceTree = "<group>"; };
+		5700AF71209059B500684960 /* NSObject+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafetyCrash.m"; sourceTree = "<group>"; };
+		5700AF72209059B500684960 /* NSString+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SafetyCrash.h"; sourceTree = "<group>"; };
+		5700AF73209059B500684960 /* NSString+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SafetyCrash.m"; sourceTree = "<group>"; };
+		5700AF74209059B500684960 /* NSTimer+Safety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Safety.h"; sourceTree = "<group>"; };
+		5700AF75209059B500684960 /* NSTimer+Safety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Safety.m"; sourceTree = "<group>"; };
+		5700AF76209059B500684960 /* SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyCrash.h; sourceTree = "<group>"; };
+		5700AF77209059B500684960 /* SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyCrash.m; sourceTree = "<group>"; };
 		571D60621EA494EF00BD6D15 /* CustomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571D606F1EA494EF00BD6D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		571D60761EA494EF00BD6D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -278,28 +300,6 @@
 		571D60FA1EA495AB00BD6D15 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		571D60FB1EA495AB00BD6D15 /* NSString+Judgement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Judgement.h"; sourceTree = "<group>"; };
 		571D60FC1EA495AB00BD6D15 /* NSString+Judgement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Judgement.m"; sourceTree = "<group>"; };
-		571D60FE1EA495AB00BD6D15 /* NSArray+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafetyCrash.h"; sourceTree = "<group>"; };
-		571D60FF1EA495AB00BD6D15 /* NSArray+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafetyCrash.m"; sourceTree = "<group>"; };
-		571D61001EA495AB00BD6D15 /* NSAttributedString+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+SafetyCrash.h"; sourceTree = "<group>"; };
-		571D61011EA495AB00BD6D15 /* NSAttributedString+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+SafetyCrash.m"; sourceTree = "<group>"; };
-		571D61021EA495AB00BD6D15 /* NSDictionary+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafetyCrash.h"; sourceTree = "<group>"; };
-		571D61031EA495AB00BD6D15 /* NSDictionary+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafetyCrash.m"; sourceTree = "<group>"; };
-		571D61041EA495AB00BD6D15 /* NSMutableArray+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafetyCrash.h"; sourceTree = "<group>"; };
-		571D61051EA495AB00BD6D15 /* NSMutableArray+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafetyCrash.m"; sourceTree = "<group>"; };
-		571D61061EA495AB00BD6D15 /* NSMutableAttributedString+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+SafetyCrash.h"; sourceTree = "<group>"; };
-		571D61071EA495AB00BD6D15 /* NSMutableAttributedString+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+SafetyCrash.m"; sourceTree = "<group>"; };
-		571D61081EA495AB00BD6D15 /* NSMutableDictionary+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+SafetyCrash.h"; sourceTree = "<group>"; };
-		571D61091EA495AB00BD6D15 /* NSMutableDictionary+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+SafetyCrash.m"; sourceTree = "<group>"; };
-		571D610A1EA495AB00BD6D15 /* NSMutableString+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+SafetyCrash.h"; sourceTree = "<group>"; };
-		571D610B1EA495AB00BD6D15 /* NSMutableString+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+SafetyCrash.m"; sourceTree = "<group>"; };
-		571D610C1EA495AB00BD6D15 /* NSObject+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafetyCrash.h"; sourceTree = "<group>"; };
-		571D610D1EA495AB00BD6D15 /* NSObject+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafetyCrash.m"; sourceTree = "<group>"; };
-		571D610E1EA495AB00BD6D15 /* NSString+SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SafetyCrash.h"; sourceTree = "<group>"; };
-		571D610F1EA495AB00BD6D15 /* NSString+SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SafetyCrash.m"; sourceTree = "<group>"; };
-		571D61101EA495AB00BD6D15 /* NSTimer+Safety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Safety.h"; sourceTree = "<group>"; };
-		571D61111EA495AB00BD6D15 /* NSTimer+Safety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Safety.m"; sourceTree = "<group>"; };
-		571D61121EA495AB00BD6D15 /* SafetyCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyCrash.h; sourceTree = "<group>"; };
-		571D61131EA495AB00BD6D15 /* SafetyCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyCrash.m; sourceTree = "<group>"; };
 		571D61141EA495AB00BD6D15 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		571D61151EA495AB00BD6D15 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		571D61161EA495AB00BD6D15 /* UIButton+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extention.h"; sourceTree = "<group>"; };
@@ -733,6 +733,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5700AF61209059B500684960 /* SafetyCrash */ = {
+			isa = PBXGroup;
+			children = (
+				5700AF62209059B500684960 /* NSArray+SafetyCrash.h */,
+				5700AF63209059B500684960 /* NSArray+SafetyCrash.m */,
+				5700AF64209059B500684960 /* NSAttributedString+SafetyCrash.h */,
+				5700AF65209059B500684960 /* NSAttributedString+SafetyCrash.m */,
+				5700AF66209059B500684960 /* NSDictionary+SafetyCrash.h */,
+				5700AF67209059B500684960 /* NSDictionary+SafetyCrash.m */,
+				5700AF68209059B500684960 /* NSMutableArray+SafetyCrash.h */,
+				5700AF69209059B500684960 /* NSMutableArray+SafetyCrash.m */,
+				5700AF6A209059B500684960 /* NSMutableAttributedString+SafetyCrash.h */,
+				5700AF6B209059B500684960 /* NSMutableAttributedString+SafetyCrash.m */,
+				5700AF6C209059B500684960 /* NSMutableDictionary+SafetyCrash.h */,
+				5700AF6D209059B500684960 /* NSMutableDictionary+SafetyCrash.m */,
+				5700AF6E209059B500684960 /* NSMutableString+SafetyCrash.h */,
+				5700AF6F209059B500684960 /* NSMutableString+SafetyCrash.m */,
+				5700AF70209059B500684960 /* NSObject+SafetyCrash.h */,
+				5700AF71209059B500684960 /* NSObject+SafetyCrash.m */,
+				5700AF72209059B500684960 /* NSString+SafetyCrash.h */,
+				5700AF73209059B500684960 /* NSString+SafetyCrash.m */,
+				5700AF74209059B500684960 /* NSTimer+Safety.h */,
+				5700AF75209059B500684960 /* NSTimer+Safety.m */,
+				5700AF76209059B500684960 /* SafetyCrash.h */,
+				5700AF77209059B500684960 /* SafetyCrash.m */,
+			);
+			name = SafetyCrash;
+			path = ../../../../../../../../GjFax_ios/HX_GJS/Classes/BaseFrame/Main/Category/SafetyCrash;
+			sourceTree = "<group>";
+		};
 		571D60591EA494EF00BD6D15 = {
 			isa = PBXGroup;
 			children = (
@@ -912,6 +942,7 @@
 		571D60F01EA495AB00BD6D15 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5700AF61209059B500684960 /* SafetyCrash */,
 				571D60F11EA495AB00BD6D15 /* NSDate+CalendarExtension.h */,
 				571D60F21EA495AB00BD6D15 /* NSDate+CalendarExtension.m */,
 				571D60F31EA495AB00BD6D15 /* NSDictionary+Extension.h */,
@@ -924,7 +955,6 @@
 				571D60FA1EA495AB00BD6D15 /* NSString+Extension.m */,
 				571D60FB1EA495AB00BD6D15 /* NSString+Judgement.h */,
 				571D60FC1EA495AB00BD6D15 /* NSString+Judgement.m */,
-				571D60FD1EA495AB00BD6D15 /* SafetyCrash */,
 				571D61141EA495AB00BD6D15 /* UIBarButtonItem+Extension.h */,
 				571D61151EA495AB00BD6D15 /* UIBarButtonItem+Extension.m */,
 				571D61161EA495AB00BD6D15 /* UIButton+Extention.h */,
@@ -939,35 +969,6 @@
 				571D611F1EA495AB00BD6D15 /* UIViewController+PresentVC.m */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		571D60FD1EA495AB00BD6D15 /* SafetyCrash */ = {
-			isa = PBXGroup;
-			children = (
-				571D60FE1EA495AB00BD6D15 /* NSArray+SafetyCrash.h */,
-				571D60FF1EA495AB00BD6D15 /* NSArray+SafetyCrash.m */,
-				571D61001EA495AB00BD6D15 /* NSAttributedString+SafetyCrash.h */,
-				571D61011EA495AB00BD6D15 /* NSAttributedString+SafetyCrash.m */,
-				571D61021EA495AB00BD6D15 /* NSDictionary+SafetyCrash.h */,
-				571D61031EA495AB00BD6D15 /* NSDictionary+SafetyCrash.m */,
-				571D61041EA495AB00BD6D15 /* NSMutableArray+SafetyCrash.h */,
-				571D61051EA495AB00BD6D15 /* NSMutableArray+SafetyCrash.m */,
-				571D61061EA495AB00BD6D15 /* NSMutableAttributedString+SafetyCrash.h */,
-				571D61071EA495AB00BD6D15 /* NSMutableAttributedString+SafetyCrash.m */,
-				571D61081EA495AB00BD6D15 /* NSMutableDictionary+SafetyCrash.h */,
-				571D61091EA495AB00BD6D15 /* NSMutableDictionary+SafetyCrash.m */,
-				571D610A1EA495AB00BD6D15 /* NSMutableString+SafetyCrash.h */,
-				571D610B1EA495AB00BD6D15 /* NSMutableString+SafetyCrash.m */,
-				571D610C1EA495AB00BD6D15 /* NSObject+SafetyCrash.h */,
-				571D610D1EA495AB00BD6D15 /* NSObject+SafetyCrash.m */,
-				571D610E1EA495AB00BD6D15 /* NSString+SafetyCrash.h */,
-				571D610F1EA495AB00BD6D15 /* NSString+SafetyCrash.m */,
-				571D61101EA495AB00BD6D15 /* NSTimer+Safety.h */,
-				571D61111EA495AB00BD6D15 /* NSTimer+Safety.m */,
-				571D61121EA495AB00BD6D15 /* SafetyCrash.h */,
-				571D61131EA495AB00BD6D15 /* SafetyCrash.m */,
-			);
-			path = SafetyCrash;
 			sourceTree = "<group>";
 		};
 		571D61201EA495AB00BD6D15 /* Controller */ = {
@@ -2962,6 +2963,7 @@
 				57B648C5209006B700F6AE91 /* MyBorderline.m in Sources */,
 				571D653D1EA495AC00BD6D15 /* MCImageButton.m in Sources */,
 				571D65651EA495AC00BD6D15 /* pushNotifiWebViewViewController.m in Sources */,
+				5700AF7C209059B500684960 /* NSMutableAttributedString+SafetyCrash.m in Sources */,
 				571D65491EA495AC00BD6D15 /* SCNavTabBar.m in Sources */,
 				571D64B71EA495AC00BD6D15 /* AppDelegate.m in Sources */,
 				571D65361EA495AC00BD6D15 /* CoreArchive.m in Sources */,
@@ -2971,18 +2973,16 @@
 				571D64EC1EA495AC00BD6D15 /* SFArchiverRequestService.m in Sources */,
 				571D64D31EA495AC00BD6D15 /* CheckUpdateAlertView.m in Sources */,
 				571D65121EA495AC00BD6D15 /* BadgeTool.m in Sources */,
-				571D64C81EA495AC00BD6D15 /* SafetyCrash.m in Sources */,
 				571D64901EA495AC00BD6D15 /* GJFaxKeyChainTool.m in Sources */,
 				571D64CC1EA495AC00BD6D15 /* UITextField+Judge.m in Sources */,
 				571D64E91EA495AC00BD6D15 /* SFArchiverBaseModel.m in Sources */,
 				571D64ED1EA495AC00BD6D15 /* SFRequestError.m in Sources */,
 				57B64883208F17D300F6AE91 /* HttpToolManager.m in Sources */,
 				57B648D4209006B700F6AE91 /* MyRelativeLayout.m in Sources */,
-				571D64C51EA495AC00BD6D15 /* NSObject+SafetyCrash.m in Sources */,
 				571D654A1EA495AC00BD6D15 /* SCPopView.m in Sources */,
 				571D64E51EA495AC00BD6D15 /* main.m in Sources */,
-				571D64C21EA495AC00BD6D15 /* NSMutableAttributedString+SafetyCrash.m in Sources */,
 				571D64CF1EA495AC00BD6D15 /* CustomBaseViewController.m in Sources */,
+				5700AF81209059B500684960 /* NSTimer+Safety.m in Sources */,
 				571D65401EA495AC00BD6D15 /* MCNumberKeyboardView.m in Sources */,
 				571D65661EA495AC00BD6D15 /* GJSShareSDKManager.m in Sources */,
 				57B648C9209006B700F6AE91 /* MyFrameLayout.m in Sources */,
@@ -3000,9 +3000,10 @@
 				57BFC64A1EB1E51C00BE2AC0 /* CustomTableViewCell.m in Sources */,
 				571D65141EA495AC00BD6D15 /* MyAccountInfoRequestService.m in Sources */,
 				571D65301EA495AC00BD6D15 /* CLLockInfoView.m in Sources */,
+				5700AF7F209059B500684960 /* NSObject+SafetyCrash.m in Sources */,
 				571D64961EA495AC00BD6D15 /* HUDTool.m in Sources */,
 				571D64E81EA495AC00BD6D15 /* SFTableViewController.m in Sources */,
-				571D64C61EA495AC00BD6D15 /* NSString+SafetyCrash.m in Sources */,
+				5700AF82209059B500684960 /* SafetyCrash.m in Sources */,
 				571D64FB1EA495AC00BD6D15 /* CryptUtil.m in Sources */,
 				571D64D71EA495AC00BD6D15 /* CustomerCountDownView.m in Sources */,
 				571D64CE1EA495AC00BD6D15 /* UIViewController+PresentVC.m in Sources */,
@@ -3036,12 +3037,13 @@
 				571D64D51EA495AC00BD6D15 /* CustomAlertView.m in Sources */,
 				571D651B1EA495AC00BD6D15 /* MyGetRewardInfoService.m in Sources */,
 				571D64E21EA495AC00BD6D15 /* FoldListSubTitleView.m in Sources */,
-				571D64C01EA495AC00BD6D15 /* NSDictionary+SafetyCrash.m in Sources */,
 				571D65371EA495AC00BD6D15 /* GJSNumKeyBoardField.m in Sources */,
 				571D64C91EA495AC00BD6D15 /* UIBarButtonItem+Extension.m in Sources */,
 				571D65341EA495AC00BD6D15 /* CLLockView.m in Sources */,
 				571D64E11EA495AC00BD6D15 /* CustomTopHeaderView.m in Sources */,
 				571D64F01EA495AC00BD6D15 /* SFArchiverFileManager.m in Sources */,
+				5700AF7D209059B500684960 /* NSMutableDictionary+SafetyCrash.m in Sources */,
+				5700AF79209059B500684960 /* NSAttributedString+SafetyCrash.m in Sources */,
 				571D64B81EA495AC00BD6D15 /* NSDate+CalendarExtension.m in Sources */,
 				571D64F91EA495AC00BD6D15 /* SpecialLogicErrorTool.m in Sources */,
 				57B64884208F17D300F6AE91 /* HttpToolManagerCache.m in Sources */,
@@ -3051,7 +3053,6 @@
 				571D64DF1EA495AC00BD6D15 /* CustomSecondRateButton.m in Sources */,
 				571D65481EA495AC00BD6D15 /* SCNavTabBarController.m in Sources */,
 				571D64EB1EA495AC00BD6D15 /* SFTableViewCellModel.m in Sources */,
-				571D64BF1EA495AC00BD6D15 /* NSAttributedString+SafetyCrash.m in Sources */,
 				571D65331EA495AC00BD6D15 /* CLLockMainView.m in Sources */,
 				571D64BB1EA495AC00BD6D15 /* NSObject+Extension.m in Sources */,
 				571D64CA1EA495AC00BD6D15 /* UIButton+Extention.m in Sources */,
@@ -3075,6 +3076,7 @@
 				571D65431EA495AC00BD6D15 /* SafeKeyBoardField.m in Sources */,
 				571D65171EA495AC00BD6D15 /* WebViewController.m in Sources */,
 				57B648D1209006B700F6AE91 /* MyLinearLayout.m in Sources */,
+				5700AF78209059B500684960 /* NSArray+SafetyCrash.m in Sources */,
 				57B648C6209006B700F6AE91 /* MyDimeScale.m in Sources */,
 				571D65021EA495AC00BD6D15 /* NSObject+ExceptionExtension.m in Sources */,
 				571D64EA1EA495AC00BD6D15 /* SFBaseModel.m in Sources */,
@@ -3087,18 +3089,17 @@
 				571D64DD1EA495AC00BD6D15 /* CustomNavTopView.m in Sources */,
 				571D64BD1EA495AC00BD6D15 /* NSString+Judgement.m in Sources */,
 				571D64D81EA495AC00BD6D15 /* CustomerIncomeCaculateView.m in Sources */,
+				5700AF80209059B500684960 /* NSString+SafetyCrash.m in Sources */,
 				571D65151EA495AC00BD6D15 /* SigninRequestService.m in Sources */,
 				57B64888208F26BC00F6AE91 /* OrderModel.m in Sources */,
 				571D64FA1EA495AC00BD6D15 /* RefreshTool.m in Sources */,
 				571D64FD1EA495AC00BD6D15 /* NSData+CommonCrypto.m in Sources */,
 				571D64FE1EA495AC00BD6D15 /* NSString+Base64.m in Sources */,
 				571D64F11EA495AC00BD6D15 /* SFTableViewCell.m in Sources */,
-				571D64C11EA495AC00BD6D15 /* NSMutableArray+SafetyCrash.m in Sources */,
+				5700AF7E209059B500684960 /* NSMutableString+SafetyCrash.m in Sources */,
 				571D652E1EA495AC00BD6D15 /* CoreLockConst.m in Sources */,
 				579F2F601EA5BA6100DD2CCD /* HttpDNSOrigin.m in Sources */,
 				579F2F611EA5BA6100DD2CCD /* NetworkManager.m in Sources */,
-				571D64C31EA495AC00BD6D15 /* NSMutableDictionary+SafetyCrash.m in Sources */,
-				571D64C71EA495AC00BD6D15 /* NSTimer+Safety.m in Sources */,
 				571D648F1EA495AC00BD6D15 /* GjfaxKeyChain.m in Sources */,
 				571D656B1EA495AC00BD6D15 /* WKWebViewJavascriptBridge.m in Sources */,
 				571D65351EA495AC00BD6D15 /* NSString+File.m in Sources */,
@@ -3109,9 +3110,7 @@
 				571D64D11EA495AC00BD6D15 /* CustomTabBarViewController.m in Sources */,
 				57B648D2209006B700F6AE91 /* MyMaker.m in Sources */,
 				571D65641EA495AC00BD6D15 /* GeTuiManager.m in Sources */,
-				571D64C41EA495AC00BD6D15 /* NSMutableString+SafetyCrash.m in Sources */,
 				579F2F5F1EA5BA6100DD2CCD /* HttpDNSLog.m in Sources */,
-				571D64BE1EA495AC00BD6D15 /* NSArray+SafetyCrash.m in Sources */,
 				571D65631EA495AC00BD6D15 /* TBCityCoreTextParser.m in Sources */,
 				571D64B61EA495AC00BD6D15 /* JSPatchTool.m in Sources */,
 				571D64F81EA495AC00BD6D15 /* NetWorkingStatusModel.m in Sources */,
@@ -3119,10 +3118,12 @@
 				571D65191EA495AC00BD6D15 /* WebViewInfoModel.m in Sources */,
 				571D65031EA495AC00BD6D15 /* HomePageViewController.m in Sources */,
 				571D648D1EA495AC00BD6D15 /* BuglyTool.m in Sources */,
+				5700AF7B209059B500684960 /* NSMutableArray+SafetyCrash.m in Sources */,
 				571D648C1EA495AC00BD6D15 /* AudioUtil.m in Sources */,
 				57B6486E208F038800F6AE91 /* OneViewController.m in Sources */,
 				571D64FF1EA495AC00BD6D15 /* NSString+MD5.m in Sources */,
 				57B648D3209006B700F6AE91 /* MyPathLayout.m in Sources */,
+				5700AF7A209059B500684960 /* NSDictionary+SafetyCrash.m in Sources */,
 				571D64921EA495AC00BD6D15 /* PhoneCodeViewModel.m in Sources */,
 				571D64D01EA495AC00BD6D15 /* CustomNavigationController.m in Sources */,
 				571D64E01EA495AC00BD6D15 /* CustomTextField.m in Sources */,

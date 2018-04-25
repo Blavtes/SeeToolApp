@@ -14,18 +14,11 @@
 {
     if (self = [super initWithDic:object]) {
         [self GJSAutoSetPropertySafety:object];
-        [self test];
+//        [self test];
     }
     return self;
 }
 
-- (void)test
-{
-    self.phone = @"135353535323";
-    self.url = @"http://ywhdnnd.djhfs/werhhsdf.sdfhsfjsdfwe./werewrw/wdgfsd/fwr.guwrw23232";
-    self.outtime = @"2018-04-23 23:11:32";
-    self.dirverName = @"c2";
-}
 @end
 
 @implementation OldOrderModel

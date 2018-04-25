@@ -9,11 +9,11 @@
 #import "SFArchiverBaseModel.h"
 
 @interface OrderModel : SFArchiverBaseModel
-@property (nonatomic, strong) NSString *outtime;
+@property (nonatomic, strong) NSString *outTime;
 @property (nonatomic, strong) NSString *dirverName;
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *code;
-@property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSString *msg;
 
 - (instancetype)initWithDic:(id)object;
 @end
